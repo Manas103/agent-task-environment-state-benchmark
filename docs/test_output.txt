@@ -1,0 +1,16 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-9.1.0, pluggy-1.6.0 -- /mnt/c/Users/Manas/Downloads/Total Job Application process flow/projects/agent-task-environment-state-benchmark/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /mnt/c/Users/Manas/Downloads/Total Job Application process flow
+configfile: pytest.ini
+plugins: anyio-4.15.1
+collecting ... collected 6 items
+
+tests/test_core.py::test_tool_catalog_has_exactly_13_tools PASSED        [ 16%]
+tests/test_core.py::test_generate_all_produces_420_tasks_with_injected_mistakes PASSED [ 33%]
+tests/test_core.py::test_reference_simulator_adjust_and_transfer_stock PASSED [ 50%]
+tests/test_core.py::test_adversarial_suite_is_120_plans_all_refused PASSED [ 66%]
+tests/test_core.py::test_admin_role_is_never_in_the_adversarial_suite PASSED [ 83%]
+tests/test_oracle_independence.py::test_oracle_package_imports_nothing_from_executor_gateway_or_environments PASSED [100%]
+
+============================== 6 passed in 0.85s ===============================

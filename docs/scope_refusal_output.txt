@@ -1,0 +1,5 @@
+agent-task-environment-state-benchmark: adversarial scope-refusal suite (120 plans)
+refused: 120/120
+allowed through (should be 0): 0
+refused but named the wrong offending step/tool (should be 0): 0
+plans per role: {'CRM_ONLY': 30, 'TICKETING_ONLY': 30, 'INVENTORY_ONLY': 30, 'CRM_AND_TICKETING': 30}

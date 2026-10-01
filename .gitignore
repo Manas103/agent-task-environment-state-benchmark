@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# Local databases (regenerate with: python scripts/run_benchmark.py --reset-db)
+*.db
+*.sqlite3
+
+# Logs and runtime artifacts (regenerate with: python scripts/run_benchmark.py)
+*.log
+data/
+.pids/
+
+# Build output
+build/
+dist/

@@ -1,0 +1,42 @@
+agent-task-environment-state-benchmark: 420-task benchmark run
+total tasks: 420
+tasks with injected mistake: 140
+clean tasks: 280
+distinct tools exercised: 12/13 -> ['adjust_stock', 'assign_ticket', 'close_ticket', 'create_account', 'create_contact', 'create_opportunity', 'create_product', 'create_ticket', 'delete_contact', 'escalate_ticket', 'transfer_stock', 'update_account_tier']
+
+deterministic local judge: 420/420 passed (100.00%)
+expected-state oracle:     280/420 passed (66.67%)
+overcredit gap (judge - oracle): 33.33 percentage points
+
+of 140 mistake-injected tasks: oracle caught 140, local judge caught 0
+of 280 clean tasks: oracle passed 280 (100.00%)
+elapsed: 18.6s for 420 tasks through the real gateway and real Postgres
+
+per-task detail (first 20 shown here; full detail in docs/benchmark_output.json):
+  T0000-crm-a [crm_a] mistake=True judge_pass=True oracle_pass=False
+      mismatch: opportunities/OPP-A-0000.stage: expected 'PROSPECT', actual 'QUALIFIED'
+  T0001-crm-b [crm_b] mistake=False judge_pass=True oracle_pass=True
+  T0002-tkt-a [ticketing_a] mistake=False judge_pass=True oracle_pass=True
+  T0003-tkt-b [ticketing_b] mistake=True judge_pass=True oracle_pass=False
+      mismatch: tickets/TKT-B-0000.close_reason: expected 'RESOLVED', actual 'DUPLICATE'
+  T0004-inv-a [inventory_a] mistake=False judge_pass=True oracle_pass=True
+  T0005-inv-b [inventory_b] mistake=False judge_pass=True oracle_pass=True
+  T0006-crm-a [crm_a] mistake=True judge_pass=True oracle_pass=False
+      mismatch: opportunities/OPP-A-0001.stage: expected 'QUALIFIED', actual 'PROPOSAL'
+  T0007-crm-b [crm_b] mistake=False judge_pass=True oracle_pass=True
+  T0008-tkt-a [ticketing_a] mistake=False judge_pass=True oracle_pass=True
+  T0009-tkt-b [ticketing_b] mistake=True judge_pass=True oracle_pass=False
+      mismatch: tickets/TKT-B-0001.close_reason: expected 'DUPLICATE', actual 'WONT_FIX'
+  T0010-inv-a [inventory_a] mistake=False judge_pass=True oracle_pass=True
+  T0011-inv-b [inventory_b] mistake=False judge_pass=True oracle_pass=True
+  T0012-crm-a [crm_a] mistake=True judge_pass=True oracle_pass=False
+      mismatch: opportunities/OPP-A-0002.stage: expected 'PROPOSAL', actual 'CLOSED_WON'
+  T0013-crm-b [crm_b] mistake=False judge_pass=True oracle_pass=True
+  T0014-tkt-a [ticketing_a] mistake=False judge_pass=True oracle_pass=True
+  T0015-tkt-b [ticketing_b] mistake=True judge_pass=True oracle_pass=False
+      mismatch: tickets/TKT-B-0002.close_reason: expected 'WONT_FIX', actual 'CUSTOMER_CLOSED'
+  T0016-inv-a [inventory_a] mistake=False judge_pass=True oracle_pass=True
+  T0017-inv-b [inventory_b] mistake=False judge_pass=True oracle_pass=True
+  T0018-crm-a [crm_a] mistake=True judge_pass=True oracle_pass=False
+      mismatch: opportunities/OPP-A-0003.stage: expected 'CLOSED_WON', actual 'PROSPECT'
+  T0019-crm-b [crm_b] mistake=False judge_pass=True oracle_pass=True

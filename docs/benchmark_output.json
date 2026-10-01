@@ -1,0 +1,4062 @@
+[
+  {
+    "task_id": "T0000-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to QUALIFIED instead of PROSPECT",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0000.stage: expected 'PROSPECT', actual 'QUALIFIED'"
+    ]
+  },
+  {
+    "task_id": "T0001-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0002-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0003-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason DUPLICATE instead of RESOLVED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0000.close_reason: expected 'RESOLVED', actual 'DUPLICATE'"
+    ]
+  },
+  {
+    "task_id": "T0004-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0005-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0006-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to PROPOSAL instead of QUALIFIED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0001.stage: expected 'QUALIFIED', actual 'PROPOSAL'"
+    ]
+  },
+  {
+    "task_id": "T0007-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0008-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0009-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason WONT_FIX instead of DUPLICATE",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0001.close_reason: expected 'DUPLICATE', actual 'WONT_FIX'"
+    ]
+  },
+  {
+    "task_id": "T0010-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0011-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0012-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to CLOSED_WON instead of PROPOSAL",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0002.stage: expected 'PROPOSAL', actual 'CLOSED_WON'"
+    ]
+  },
+  {
+    "task_id": "T0013-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0014-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0015-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason CUSTOMER_CLOSED instead of WONT_FIX",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0002.close_reason: expected 'WONT_FIX', actual 'CUSTOMER_CLOSED'"
+    ]
+  },
+  {
+    "task_id": "T0016-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0017-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0018-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to PROSPECT instead of CLOSED_WON",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0003.stage: expected 'CLOSED_WON', actual 'PROSPECT'"
+    ]
+  },
+  {
+    "task_id": "T0019-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0020-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0021-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason RESOLVED instead of CUSTOMER_CLOSED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0003.close_reason: expected 'CUSTOMER_CLOSED', actual 'RESOLVED'"
+    ]
+  },
+  {
+    "task_id": "T0022-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0023-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0024-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to QUALIFIED instead of PROSPECT",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0004.stage: expected 'PROSPECT', actual 'QUALIFIED'"
+    ]
+  },
+  {
+    "task_id": "T0025-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0026-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0027-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason DUPLICATE instead of RESOLVED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0004.close_reason: expected 'RESOLVED', actual 'DUPLICATE'"
+    ]
+  },
+  {
+    "task_id": "T0028-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0029-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0030-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to PROPOSAL instead of QUALIFIED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0005.stage: expected 'QUALIFIED', actual 'PROPOSAL'"
+    ]
+  },
+  {
+    "task_id": "T0031-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0032-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0033-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason WONT_FIX instead of DUPLICATE",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0005.close_reason: expected 'DUPLICATE', actual 'WONT_FIX'"
+    ]
+  },
+  {
+    "task_id": "T0034-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0035-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0036-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to CLOSED_WON instead of PROPOSAL",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0006.stage: expected 'PROPOSAL', actual 'CLOSED_WON'"
+    ]
+  },
+  {
+    "task_id": "T0037-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0038-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0039-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason CUSTOMER_CLOSED instead of WONT_FIX",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0006.close_reason: expected 'WONT_FIX', actual 'CUSTOMER_CLOSED'"
+    ]
+  },
+  {
+    "task_id": "T0040-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0041-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0042-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to PROSPECT instead of CLOSED_WON",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0007.stage: expected 'CLOSED_WON', actual 'PROSPECT'"
+    ]
+  },
+  {
+    "task_id": "T0043-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0044-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0045-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason RESOLVED instead of CUSTOMER_CLOSED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0007.close_reason: expected 'CUSTOMER_CLOSED', actual 'RESOLVED'"
+    ]
+  },
+  {
+    "task_id": "T0046-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0047-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0048-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to QUALIFIED instead of PROSPECT",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0008.stage: expected 'PROSPECT', actual 'QUALIFIED'"
+    ]
+  },
+  {
+    "task_id": "T0049-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0050-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0051-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason DUPLICATE instead of RESOLVED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0008.close_reason: expected 'RESOLVED', actual 'DUPLICATE'"
+    ]
+  },
+  {
+    "task_id": "T0052-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0053-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0054-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to PROPOSAL instead of QUALIFIED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0009.stage: expected 'QUALIFIED', actual 'PROPOSAL'"
+    ]
+  },
+  {
+    "task_id": "T0055-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0056-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0057-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason WONT_FIX instead of DUPLICATE",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0009.close_reason: expected 'DUPLICATE', actual 'WONT_FIX'"
+    ]
+  },
+  {
+    "task_id": "T0058-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0059-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0060-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to CLOSED_WON instead of PROPOSAL",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0010.stage: expected 'PROPOSAL', actual 'CLOSED_WON'"
+    ]
+  },
+  {
+    "task_id": "T0061-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0062-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0063-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason CUSTOMER_CLOSED instead of WONT_FIX",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0010.close_reason: expected 'WONT_FIX', actual 'CUSTOMER_CLOSED'"
+    ]
+  },
+  {
+    "task_id": "T0064-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0065-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0066-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to PROSPECT instead of CLOSED_WON",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0011.stage: expected 'CLOSED_WON', actual 'PROSPECT'"
+    ]
+  },
+  {
+    "task_id": "T0067-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0068-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0069-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason RESOLVED instead of CUSTOMER_CLOSED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0011.close_reason: expected 'CUSTOMER_CLOSED', actual 'RESOLVED'"
+    ]
+  },
+  {
+    "task_id": "T0070-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0071-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0072-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to QUALIFIED instead of PROSPECT",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0012.stage: expected 'PROSPECT', actual 'QUALIFIED'"
+    ]
+  },
+  {
+    "task_id": "T0073-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0074-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0075-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason DUPLICATE instead of RESOLVED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0012.close_reason: expected 'RESOLVED', actual 'DUPLICATE'"
+    ]
+  },
+  {
+    "task_id": "T0076-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0077-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0078-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to PROPOSAL instead of QUALIFIED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0013.stage: expected 'QUALIFIED', actual 'PROPOSAL'"
+    ]
+  },
+  {
+    "task_id": "T0079-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0080-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0081-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason WONT_FIX instead of DUPLICATE",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0013.close_reason: expected 'DUPLICATE', actual 'WONT_FIX'"
+    ]
+  },
+  {
+    "task_id": "T0082-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0083-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0084-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to CLOSED_WON instead of PROPOSAL",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0014.stage: expected 'PROPOSAL', actual 'CLOSED_WON'"
+    ]
+  },
+  {
+    "task_id": "T0085-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0086-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0087-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason CUSTOMER_CLOSED instead of WONT_FIX",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0014.close_reason: expected 'WONT_FIX', actual 'CUSTOMER_CLOSED'"
+    ]
+  },
+  {
+    "task_id": "T0088-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0089-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0090-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to PROSPECT instead of CLOSED_WON",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0015.stage: expected 'CLOSED_WON', actual 'PROSPECT'"
+    ]
+  },
+  {
+    "task_id": "T0091-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0092-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0093-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason RESOLVED instead of CUSTOMER_CLOSED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0015.close_reason: expected 'CUSTOMER_CLOSED', actual 'RESOLVED'"
+    ]
+  },
+  {
+    "task_id": "T0094-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0095-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0096-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to QUALIFIED instead of PROSPECT",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0016.stage: expected 'PROSPECT', actual 'QUALIFIED'"
+    ]
+  },
+  {
+    "task_id": "T0097-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0098-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0099-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason DUPLICATE instead of RESOLVED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0016.close_reason: expected 'RESOLVED', actual 'DUPLICATE'"
+    ]
+  },
+  {
+    "task_id": "T0100-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0101-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0102-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to PROPOSAL instead of QUALIFIED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0017.stage: expected 'QUALIFIED', actual 'PROPOSAL'"
+    ]
+  },
+  {
+    "task_id": "T0103-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0104-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0105-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason WONT_FIX instead of DUPLICATE",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0017.close_reason: expected 'DUPLICATE', actual 'WONT_FIX'"
+    ]
+  },
+  {
+    "task_id": "T0106-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0107-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0108-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to CLOSED_WON instead of PROPOSAL",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0018.stage: expected 'PROPOSAL', actual 'CLOSED_WON'"
+    ]
+  },
+  {
+    "task_id": "T0109-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0110-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0111-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason CUSTOMER_CLOSED instead of WONT_FIX",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0018.close_reason: expected 'WONT_FIX', actual 'CUSTOMER_CLOSED'"
+    ]
+  },
+  {
+    "task_id": "T0112-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0113-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0114-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to PROSPECT instead of CLOSED_WON",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0019.stage: expected 'CLOSED_WON', actual 'PROSPECT'"
+    ]
+  },
+  {
+    "task_id": "T0115-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0116-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0117-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason RESOLVED instead of CUSTOMER_CLOSED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0019.close_reason: expected 'CUSTOMER_CLOSED', actual 'RESOLVED'"
+    ]
+  },
+  {
+    "task_id": "T0118-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0119-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0120-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to QUALIFIED instead of PROSPECT",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0020.stage: expected 'PROSPECT', actual 'QUALIFIED'"
+    ]
+  },
+  {
+    "task_id": "T0121-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0122-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0123-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason DUPLICATE instead of RESOLVED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0020.close_reason: expected 'RESOLVED', actual 'DUPLICATE'"
+    ]
+  },
+  {
+    "task_id": "T0124-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0125-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0126-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to PROPOSAL instead of QUALIFIED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0021.stage: expected 'QUALIFIED', actual 'PROPOSAL'"
+    ]
+  },
+  {
+    "task_id": "T0127-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0128-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0129-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason WONT_FIX instead of DUPLICATE",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0021.close_reason: expected 'DUPLICATE', actual 'WONT_FIX'"
+    ]
+  },
+  {
+    "task_id": "T0130-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0131-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0132-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to CLOSED_WON instead of PROPOSAL",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0022.stage: expected 'PROPOSAL', actual 'CLOSED_WON'"
+    ]
+  },
+  {
+    "task_id": "T0133-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0134-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0135-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason CUSTOMER_CLOSED instead of WONT_FIX",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0022.close_reason: expected 'WONT_FIX', actual 'CUSTOMER_CLOSED'"
+    ]
+  },
+  {
+    "task_id": "T0136-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0137-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0138-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to PROSPECT instead of CLOSED_WON",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0023.stage: expected 'CLOSED_WON', actual 'PROSPECT'"
+    ]
+  },
+  {
+    "task_id": "T0139-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0140-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0141-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason RESOLVED instead of CUSTOMER_CLOSED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0023.close_reason: expected 'CUSTOMER_CLOSED', actual 'RESOLVED'"
+    ]
+  },
+  {
+    "task_id": "T0142-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0143-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0144-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to QUALIFIED instead of PROSPECT",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0024.stage: expected 'PROSPECT', actual 'QUALIFIED'"
+    ]
+  },
+  {
+    "task_id": "T0145-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0146-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0147-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason DUPLICATE instead of RESOLVED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0024.close_reason: expected 'RESOLVED', actual 'DUPLICATE'"
+    ]
+  },
+  {
+    "task_id": "T0148-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0149-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0150-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to PROPOSAL instead of QUALIFIED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0025.stage: expected 'QUALIFIED', actual 'PROPOSAL'"
+    ]
+  },
+  {
+    "task_id": "T0151-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0152-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0153-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason WONT_FIX instead of DUPLICATE",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0025.close_reason: expected 'DUPLICATE', actual 'WONT_FIX'"
+    ]
+  },
+  {
+    "task_id": "T0154-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0155-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0156-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to CLOSED_WON instead of PROPOSAL",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0026.stage: expected 'PROPOSAL', actual 'CLOSED_WON'"
+    ]
+  },
+  {
+    "task_id": "T0157-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0158-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0159-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason CUSTOMER_CLOSED instead of WONT_FIX",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0026.close_reason: expected 'WONT_FIX', actual 'CUSTOMER_CLOSED'"
+    ]
+  },
+  {
+    "task_id": "T0160-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0161-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0162-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to PROSPECT instead of CLOSED_WON",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0027.stage: expected 'CLOSED_WON', actual 'PROSPECT'"
+    ]
+  },
+  {
+    "task_id": "T0163-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0164-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0165-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason RESOLVED instead of CUSTOMER_CLOSED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0027.close_reason: expected 'CUSTOMER_CLOSED', actual 'RESOLVED'"
+    ]
+  },
+  {
+    "task_id": "T0166-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0167-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0168-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to QUALIFIED instead of PROSPECT",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0028.stage: expected 'PROSPECT', actual 'QUALIFIED'"
+    ]
+  },
+  {
+    "task_id": "T0169-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0170-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0171-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason DUPLICATE instead of RESOLVED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0028.close_reason: expected 'RESOLVED', actual 'DUPLICATE'"
+    ]
+  },
+  {
+    "task_id": "T0172-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0173-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0174-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to PROPOSAL instead of QUALIFIED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0029.stage: expected 'QUALIFIED', actual 'PROPOSAL'"
+    ]
+  },
+  {
+    "task_id": "T0175-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0176-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0177-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason WONT_FIX instead of DUPLICATE",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0029.close_reason: expected 'DUPLICATE', actual 'WONT_FIX'"
+    ]
+  },
+  {
+    "task_id": "T0178-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0179-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0180-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to CLOSED_WON instead of PROPOSAL",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0030.stage: expected 'PROPOSAL', actual 'CLOSED_WON'"
+    ]
+  },
+  {
+    "task_id": "T0181-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0182-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0183-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason CUSTOMER_CLOSED instead of WONT_FIX",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0030.close_reason: expected 'WONT_FIX', actual 'CUSTOMER_CLOSED'"
+    ]
+  },
+  {
+    "task_id": "T0184-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0185-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0186-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to PROSPECT instead of CLOSED_WON",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0031.stage: expected 'CLOSED_WON', actual 'PROSPECT'"
+    ]
+  },
+  {
+    "task_id": "T0187-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0188-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0189-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason RESOLVED instead of CUSTOMER_CLOSED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0031.close_reason: expected 'CUSTOMER_CLOSED', actual 'RESOLVED'"
+    ]
+  },
+  {
+    "task_id": "T0190-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0191-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0192-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to QUALIFIED instead of PROSPECT",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0032.stage: expected 'PROSPECT', actual 'QUALIFIED'"
+    ]
+  },
+  {
+    "task_id": "T0193-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0194-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0195-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason DUPLICATE instead of RESOLVED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0032.close_reason: expected 'RESOLVED', actual 'DUPLICATE'"
+    ]
+  },
+  {
+    "task_id": "T0196-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0197-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0198-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to PROPOSAL instead of QUALIFIED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0033.stage: expected 'QUALIFIED', actual 'PROPOSAL'"
+    ]
+  },
+  {
+    "task_id": "T0199-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0200-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0201-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason WONT_FIX instead of DUPLICATE",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0033.close_reason: expected 'DUPLICATE', actual 'WONT_FIX'"
+    ]
+  },
+  {
+    "task_id": "T0202-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0203-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0204-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to CLOSED_WON instead of PROPOSAL",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0034.stage: expected 'PROPOSAL', actual 'CLOSED_WON'"
+    ]
+  },
+  {
+    "task_id": "T0205-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0206-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0207-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason CUSTOMER_CLOSED instead of WONT_FIX",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0034.close_reason: expected 'WONT_FIX', actual 'CUSTOMER_CLOSED'"
+    ]
+  },
+  {
+    "task_id": "T0208-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0209-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0210-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to PROSPECT instead of CLOSED_WON",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0035.stage: expected 'CLOSED_WON', actual 'PROSPECT'"
+    ]
+  },
+  {
+    "task_id": "T0211-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0212-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0213-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason RESOLVED instead of CUSTOMER_CLOSED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0035.close_reason: expected 'CUSTOMER_CLOSED', actual 'RESOLVED'"
+    ]
+  },
+  {
+    "task_id": "T0214-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0215-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0216-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to QUALIFIED instead of PROSPECT",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0036.stage: expected 'PROSPECT', actual 'QUALIFIED'"
+    ]
+  },
+  {
+    "task_id": "T0217-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0218-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0219-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason DUPLICATE instead of RESOLVED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0036.close_reason: expected 'RESOLVED', actual 'DUPLICATE'"
+    ]
+  },
+  {
+    "task_id": "T0220-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0221-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0222-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to PROPOSAL instead of QUALIFIED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0037.stage: expected 'QUALIFIED', actual 'PROPOSAL'"
+    ]
+  },
+  {
+    "task_id": "T0223-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0224-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0225-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason WONT_FIX instead of DUPLICATE",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0037.close_reason: expected 'DUPLICATE', actual 'WONT_FIX'"
+    ]
+  },
+  {
+    "task_id": "T0226-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0227-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0228-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to CLOSED_WON instead of PROPOSAL",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0038.stage: expected 'PROPOSAL', actual 'CLOSED_WON'"
+    ]
+  },
+  {
+    "task_id": "T0229-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0230-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0231-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason CUSTOMER_CLOSED instead of WONT_FIX",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0038.close_reason: expected 'WONT_FIX', actual 'CUSTOMER_CLOSED'"
+    ]
+  },
+  {
+    "task_id": "T0232-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0233-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0234-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to PROSPECT instead of CLOSED_WON",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0039.stage: expected 'CLOSED_WON', actual 'PROSPECT'"
+    ]
+  },
+  {
+    "task_id": "T0235-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0236-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0237-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason RESOLVED instead of CUSTOMER_CLOSED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0039.close_reason: expected 'CUSTOMER_CLOSED', actual 'RESOLVED'"
+    ]
+  },
+  {
+    "task_id": "T0238-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0239-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0240-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to QUALIFIED instead of PROSPECT",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0040.stage: expected 'PROSPECT', actual 'QUALIFIED'"
+    ]
+  },
+  {
+    "task_id": "T0241-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0242-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0243-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason DUPLICATE instead of RESOLVED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0040.close_reason: expected 'RESOLVED', actual 'DUPLICATE'"
+    ]
+  },
+  {
+    "task_id": "T0244-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0245-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0246-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to PROPOSAL instead of QUALIFIED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0041.stage: expected 'QUALIFIED', actual 'PROPOSAL'"
+    ]
+  },
+  {
+    "task_id": "T0247-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0248-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0249-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason WONT_FIX instead of DUPLICATE",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0041.close_reason: expected 'DUPLICATE', actual 'WONT_FIX'"
+    ]
+  },
+  {
+    "task_id": "T0250-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0251-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0252-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to CLOSED_WON instead of PROPOSAL",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0042.stage: expected 'PROPOSAL', actual 'CLOSED_WON'"
+    ]
+  },
+  {
+    "task_id": "T0253-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0254-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0255-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason CUSTOMER_CLOSED instead of WONT_FIX",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0042.close_reason: expected 'WONT_FIX', actual 'CUSTOMER_CLOSED'"
+    ]
+  },
+  {
+    "task_id": "T0256-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0257-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0258-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to PROSPECT instead of CLOSED_WON",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0043.stage: expected 'CLOSED_WON', actual 'PROSPECT'"
+    ]
+  },
+  {
+    "task_id": "T0259-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0260-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0261-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason RESOLVED instead of CUSTOMER_CLOSED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0043.close_reason: expected 'CUSTOMER_CLOSED', actual 'RESOLVED'"
+    ]
+  },
+  {
+    "task_id": "T0262-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0263-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0264-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to QUALIFIED instead of PROSPECT",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0044.stage: expected 'PROSPECT', actual 'QUALIFIED'"
+    ]
+  },
+  {
+    "task_id": "T0265-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0266-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0267-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason DUPLICATE instead of RESOLVED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0044.close_reason: expected 'RESOLVED', actual 'DUPLICATE'"
+    ]
+  },
+  {
+    "task_id": "T0268-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0269-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0270-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to PROPOSAL instead of QUALIFIED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0045.stage: expected 'QUALIFIED', actual 'PROPOSAL'"
+    ]
+  },
+  {
+    "task_id": "T0271-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0272-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0273-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason WONT_FIX instead of DUPLICATE",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0045.close_reason: expected 'DUPLICATE', actual 'WONT_FIX'"
+    ]
+  },
+  {
+    "task_id": "T0274-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0275-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0276-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to CLOSED_WON instead of PROPOSAL",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0046.stage: expected 'PROPOSAL', actual 'CLOSED_WON'"
+    ]
+  },
+  {
+    "task_id": "T0277-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0278-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0279-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason CUSTOMER_CLOSED instead of WONT_FIX",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0046.close_reason: expected 'WONT_FIX', actual 'CUSTOMER_CLOSED'"
+    ]
+  },
+  {
+    "task_id": "T0280-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0281-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0282-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to PROSPECT instead of CLOSED_WON",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0047.stage: expected 'CLOSED_WON', actual 'PROSPECT'"
+    ]
+  },
+  {
+    "task_id": "T0283-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0284-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0285-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason RESOLVED instead of CUSTOMER_CLOSED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0047.close_reason: expected 'CUSTOMER_CLOSED', actual 'RESOLVED'"
+    ]
+  },
+  {
+    "task_id": "T0286-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0287-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0288-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to QUALIFIED instead of PROSPECT",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0048.stage: expected 'PROSPECT', actual 'QUALIFIED'"
+    ]
+  },
+  {
+    "task_id": "T0289-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0290-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0291-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason DUPLICATE instead of RESOLVED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0048.close_reason: expected 'RESOLVED', actual 'DUPLICATE'"
+    ]
+  },
+  {
+    "task_id": "T0292-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0293-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0294-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to PROPOSAL instead of QUALIFIED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0049.stage: expected 'QUALIFIED', actual 'PROPOSAL'"
+    ]
+  },
+  {
+    "task_id": "T0295-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0296-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0297-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason WONT_FIX instead of DUPLICATE",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0049.close_reason: expected 'DUPLICATE', actual 'WONT_FIX'"
+    ]
+  },
+  {
+    "task_id": "T0298-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0299-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0300-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to CLOSED_WON instead of PROPOSAL",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0050.stage: expected 'PROPOSAL', actual 'CLOSED_WON'"
+    ]
+  },
+  {
+    "task_id": "T0301-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0302-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0303-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason CUSTOMER_CLOSED instead of WONT_FIX",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0050.close_reason: expected 'WONT_FIX', actual 'CUSTOMER_CLOSED'"
+    ]
+  },
+  {
+    "task_id": "T0304-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0305-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0306-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to PROSPECT instead of CLOSED_WON",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0051.stage: expected 'CLOSED_WON', actual 'PROSPECT'"
+    ]
+  },
+  {
+    "task_id": "T0307-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0308-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0309-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason RESOLVED instead of CUSTOMER_CLOSED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0051.close_reason: expected 'CUSTOMER_CLOSED', actual 'RESOLVED'"
+    ]
+  },
+  {
+    "task_id": "T0310-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0311-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0312-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to QUALIFIED instead of PROSPECT",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0052.stage: expected 'PROSPECT', actual 'QUALIFIED'"
+    ]
+  },
+  {
+    "task_id": "T0313-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0314-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0315-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason DUPLICATE instead of RESOLVED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0052.close_reason: expected 'RESOLVED', actual 'DUPLICATE'"
+    ]
+  },
+  {
+    "task_id": "T0316-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0317-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0318-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to PROPOSAL instead of QUALIFIED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0053.stage: expected 'QUALIFIED', actual 'PROPOSAL'"
+    ]
+  },
+  {
+    "task_id": "T0319-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0320-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0321-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason WONT_FIX instead of DUPLICATE",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0053.close_reason: expected 'DUPLICATE', actual 'WONT_FIX'"
+    ]
+  },
+  {
+    "task_id": "T0322-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0323-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0324-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to CLOSED_WON instead of PROPOSAL",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0054.stage: expected 'PROPOSAL', actual 'CLOSED_WON'"
+    ]
+  },
+  {
+    "task_id": "T0325-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0326-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0327-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason CUSTOMER_CLOSED instead of WONT_FIX",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0054.close_reason: expected 'WONT_FIX', actual 'CUSTOMER_CLOSED'"
+    ]
+  },
+  {
+    "task_id": "T0328-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0329-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0330-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to PROSPECT instead of CLOSED_WON",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0055.stage: expected 'CLOSED_WON', actual 'PROSPECT'"
+    ]
+  },
+  {
+    "task_id": "T0331-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0332-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0333-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason RESOLVED instead of CUSTOMER_CLOSED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0055.close_reason: expected 'CUSTOMER_CLOSED', actual 'RESOLVED'"
+    ]
+  },
+  {
+    "task_id": "T0334-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0335-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0336-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to QUALIFIED instead of PROSPECT",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0056.stage: expected 'PROSPECT', actual 'QUALIFIED'"
+    ]
+  },
+  {
+    "task_id": "T0337-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0338-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0339-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason DUPLICATE instead of RESOLVED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0056.close_reason: expected 'RESOLVED', actual 'DUPLICATE'"
+    ]
+  },
+  {
+    "task_id": "T0340-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0341-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0342-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to PROPOSAL instead of QUALIFIED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0057.stage: expected 'QUALIFIED', actual 'PROPOSAL'"
+    ]
+  },
+  {
+    "task_id": "T0343-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0344-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0345-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason WONT_FIX instead of DUPLICATE",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0057.close_reason: expected 'DUPLICATE', actual 'WONT_FIX'"
+    ]
+  },
+  {
+    "task_id": "T0346-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0347-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0348-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to CLOSED_WON instead of PROPOSAL",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0058.stage: expected 'PROPOSAL', actual 'CLOSED_WON'"
+    ]
+  },
+  {
+    "task_id": "T0349-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0350-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0351-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason CUSTOMER_CLOSED instead of WONT_FIX",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0058.close_reason: expected 'WONT_FIX', actual 'CUSTOMER_CLOSED'"
+    ]
+  },
+  {
+    "task_id": "T0352-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0353-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0354-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to PROSPECT instead of CLOSED_WON",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0059.stage: expected 'CLOSED_WON', actual 'PROSPECT'"
+    ]
+  },
+  {
+    "task_id": "T0355-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0356-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0357-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason RESOLVED instead of CUSTOMER_CLOSED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0059.close_reason: expected 'CUSTOMER_CLOSED', actual 'RESOLVED'"
+    ]
+  },
+  {
+    "task_id": "T0358-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0359-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0360-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to QUALIFIED instead of PROSPECT",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0060.stage: expected 'PROSPECT', actual 'QUALIFIED'"
+    ]
+  },
+  {
+    "task_id": "T0361-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0362-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0363-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason DUPLICATE instead of RESOLVED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0060.close_reason: expected 'RESOLVED', actual 'DUPLICATE'"
+    ]
+  },
+  {
+    "task_id": "T0364-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0365-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0366-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to PROPOSAL instead of QUALIFIED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0061.stage: expected 'QUALIFIED', actual 'PROPOSAL'"
+    ]
+  },
+  {
+    "task_id": "T0367-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0368-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0369-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason WONT_FIX instead of DUPLICATE",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0061.close_reason: expected 'DUPLICATE', actual 'WONT_FIX'"
+    ]
+  },
+  {
+    "task_id": "T0370-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0371-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0372-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to CLOSED_WON instead of PROPOSAL",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0062.stage: expected 'PROPOSAL', actual 'CLOSED_WON'"
+    ]
+  },
+  {
+    "task_id": "T0373-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0374-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0375-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason CUSTOMER_CLOSED instead of WONT_FIX",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0062.close_reason: expected 'WONT_FIX', actual 'CUSTOMER_CLOSED'"
+    ]
+  },
+  {
+    "task_id": "T0376-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0377-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0378-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to PROSPECT instead of CLOSED_WON",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0063.stage: expected 'CLOSED_WON', actual 'PROSPECT'"
+    ]
+  },
+  {
+    "task_id": "T0379-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0380-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0381-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason RESOLVED instead of CUSTOMER_CLOSED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0063.close_reason: expected 'CUSTOMER_CLOSED', actual 'RESOLVED'"
+    ]
+  },
+  {
+    "task_id": "T0382-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0383-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0384-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to QUALIFIED instead of PROSPECT",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0064.stage: expected 'PROSPECT', actual 'QUALIFIED'"
+    ]
+  },
+  {
+    "task_id": "T0385-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0386-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0387-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason DUPLICATE instead of RESOLVED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0064.close_reason: expected 'RESOLVED', actual 'DUPLICATE'"
+    ]
+  },
+  {
+    "task_id": "T0388-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0389-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0390-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to PROPOSAL instead of QUALIFIED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0065.stage: expected 'QUALIFIED', actual 'PROPOSAL'"
+    ]
+  },
+  {
+    "task_id": "T0391-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0392-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0393-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason WONT_FIX instead of DUPLICATE",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0065.close_reason: expected 'DUPLICATE', actual 'WONT_FIX'"
+    ]
+  },
+  {
+    "task_id": "T0394-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0395-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0396-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to CLOSED_WON instead of PROPOSAL",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0066.stage: expected 'PROPOSAL', actual 'CLOSED_WON'"
+    ]
+  },
+  {
+    "task_id": "T0397-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0398-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0399-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason CUSTOMER_CLOSED instead of WONT_FIX",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0066.close_reason: expected 'WONT_FIX', actual 'CUSTOMER_CLOSED'"
+    ]
+  },
+  {
+    "task_id": "T0400-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0401-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0402-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to PROSPECT instead of CLOSED_WON",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0067.stage: expected 'CLOSED_WON', actual 'PROSPECT'"
+    ]
+  },
+  {
+    "task_id": "T0403-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0404-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0405-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason RESOLVED instead of CUSTOMER_CLOSED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0067.close_reason: expected 'CUSTOMER_CLOSED', actual 'RESOLVED'"
+    ]
+  },
+  {
+    "task_id": "T0406-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0407-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0408-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to QUALIFIED instead of PROSPECT",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0068.stage: expected 'PROSPECT', actual 'QUALIFIED'"
+    ]
+  },
+  {
+    "task_id": "T0409-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0410-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0411-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason DUPLICATE instead of RESOLVED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0068.close_reason: expected 'RESOLVED', actual 'DUPLICATE'"
+    ]
+  },
+  {
+    "task_id": "T0412-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0413-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0414-crm-a",
+    "template": "crm_a",
+    "has_mistake": true,
+    "mistake_note": "opportunity stage set to PROPOSAL instead of QUALIFIED",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "opportunities/OPP-A-0069.stage: expected 'QUALIFIED', actual 'PROPOSAL'"
+    ]
+  },
+  {
+    "task_id": "T0415-crm-b",
+    "template": "crm_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0416-tkt-a",
+    "template": "ticketing_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0417-tkt-b",
+    "template": "ticketing_b",
+    "has_mistake": true,
+    "mistake_note": "closed with reason WONT_FIX instead of DUPLICATE",
+    "judge_passed": true,
+    "oracle_passed": false,
+    "oracle_mismatches": [
+      "tickets/TKT-B-0069.close_reason: expected 'DUPLICATE', actual 'WONT_FIX'"
+    ]
+  },
+  {
+    "task_id": "T0418-inv-a",
+    "template": "inventory_a",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  },
+  {
+    "task_id": "T0419-inv-b",
+    "template": "inventory_b",
+    "has_mistake": false,
+    "mistake_note": "",
+    "judge_passed": true,
+    "oracle_passed": true,
+    "oracle_mismatches": []
+  }
+]
