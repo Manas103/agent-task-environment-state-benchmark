@@ -17,3 +17,9 @@ data/
 # Build output
 build/
 dist/
+
+# Full 1,260-span captures (regenerate with: python -m scripts.run_span_capture);
+# only the first-130-line samples (otel_spans_*_sample.jsonl) are tracked.
+docs/otel_spans_baseline.jsonl
+docs/otel_spans_regressed.jsonl
+docs/otel_spans.jsonl

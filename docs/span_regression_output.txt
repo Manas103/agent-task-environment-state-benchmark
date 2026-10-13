@@ -1,0 +1,33 @@
+=== Per-tool span attribution: baseline vs. one injected 50ms regression on escalate_ticket ===
+
+tool                     baseline ms   regressed ms    delta ms   delta %
+adjust_stock                   8.561          8.662       0.101      1.2%
+assign_ticket                  8.685          8.748       0.063      0.7%
+close_ticket                   8.672          8.719       0.047      0.5%
+create_account                 8.555          8.773       0.218      2.5%
+create_contact                 8.368          8.510       0.142      1.7%
+create_opportunity             8.388          8.612       0.224      2.7%
+create_product                 8.755          8.756       0.001      0.0%
+create_ticket                  8.689          8.792       0.103      1.2%
+delete_contact                 8.391          8.550       0.159      1.9%
+escalate_ticket                8.844         59.911      51.067    577.4%
+transfer_stock                 9.126          9.238       0.112      1.2%
+update_account_tier            8.497          8.653       0.156      1.8%
+
+tools flagged as changed by more than 20%: ['escalate_ticket']
+injected regression was on: escalate_ticket (+50ms, disclosed and synthetic)
+correctly isolated to exactly the injected tool: True
+
+per-tool token and cost totals (baseline run, same proxy estimator both runs):
+  adjust_stock: n=140 mean_tokens=15.0 total_cost_usd=0.000315
+  assign_ticket: n=140 mean_tokens=13.0 total_cost_usd=0.000273
+  close_ticket: n=70 mean_tokens=12.0 total_cost_usd=0.000126
+  create_account: n=140 mean_tokens=17.0 total_cost_usd=0.000357
+  create_contact: n=140 mean_tokens=23.0 total_cost_usd=0.000483
+  create_opportunity: n=70 mean_tokens=19.0 total_cost_usd=0.000199
+  create_product: n=140 mean_tokens=15.0 total_cost_usd=0.000315
+  create_ticket: n=140 mean_tokens=16.0 total_cost_usd=0.000336
+  delete_contact: n=70 mean_tokens=10.0 total_cost_usd=0.000105
+  escalate_ticket: n=70 mean_tokens=12.0 total_cost_usd=0.000126
+  transfer_stock: n=70 mean_tokens=18.0 total_cost_usd=0.000189
+  update_account_tier: n=70 mean_tokens=12.0 total_cost_usd=0.000126

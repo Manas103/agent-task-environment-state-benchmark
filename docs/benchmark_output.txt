@@ -10,7 +10,7 @@ overcredit gap (judge - oracle): 33.33 percentage points
 
 of 140 mistake-injected tasks: oracle caught 140, local judge caught 0
 of 280 clean tasks: oracle passed 280 (100.00%)
-elapsed: 18.6s for 420 tasks through the real gateway and real Postgres
+elapsed: 18.3s for 420 tasks through the real gateway and real Postgres
 
 per-task detail (first 20 shown here; full detail in docs/benchmark_output.json):
   T0000-crm-a [crm_a] mistake=True judge_pass=True oracle_pass=False

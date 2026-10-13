@@ -1,0 +1,153 @@
+{
+  "baseline": {
+    "adjust_stock": {
+      "n": 140,
+      "mean_latency_ms": 8.561,
+      "mean_tokens": 15.0,
+      "total_cost_usd": 0.000315
+    },
+    "assign_ticket": {
+      "n": 140,
+      "mean_latency_ms": 8.685,
+      "mean_tokens": 13.0,
+      "total_cost_usd": 0.000273
+    },
+    "close_ticket": {
+      "n": 70,
+      "mean_latency_ms": 8.672,
+      "mean_tokens": 12.0,
+      "total_cost_usd": 0.000126
+    },
+    "create_account": {
+      "n": 140,
+      "mean_latency_ms": 8.555,
+      "mean_tokens": 17.0,
+      "total_cost_usd": 0.000357
+    },
+    "create_contact": {
+      "n": 140,
+      "mean_latency_ms": 8.368,
+      "mean_tokens": 23.0,
+      "total_cost_usd": 0.000483
+    },
+    "create_opportunity": {
+      "n": 70,
+      "mean_latency_ms": 8.388,
+      "mean_tokens": 19.0,
+      "total_cost_usd": 0.000199
+    },
+    "create_product": {
+      "n": 140,
+      "mean_latency_ms": 8.755,
+      "mean_tokens": 15.0,
+      "total_cost_usd": 0.000315
+    },
+    "create_ticket": {
+      "n": 140,
+      "mean_latency_ms": 8.689,
+      "mean_tokens": 16.0,
+      "total_cost_usd": 0.000336
+    },
+    "delete_contact": {
+      "n": 70,
+      "mean_latency_ms": 8.391,
+      "mean_tokens": 10.0,
+      "total_cost_usd": 0.000105
+    },
+    "escalate_ticket": {
+      "n": 70,
+      "mean_latency_ms": 8.844,
+      "mean_tokens": 12.0,
+      "total_cost_usd": 0.000126
+    },
+    "transfer_stock": {
+      "n": 70,
+      "mean_latency_ms": 9.126,
+      "mean_tokens": 18.0,
+      "total_cost_usd": 0.000189
+    },
+    "update_account_tier": {
+      "n": 70,
+      "mean_latency_ms": 8.497,
+      "mean_tokens": 12.0,
+      "total_cost_usd": 0.000126
+    }
+  },
+  "regressed": {
+    "adjust_stock": {
+      "n": 140,
+      "mean_latency_ms": 8.662,
+      "mean_tokens": 15.0,
+      "total_cost_usd": 0.000315
+    },
+    "assign_ticket": {
+      "n": 140,
+      "mean_latency_ms": 8.748,
+      "mean_tokens": 13.0,
+      "total_cost_usd": 0.000273
+    },
+    "close_ticket": {
+      "n": 70,
+      "mean_latency_ms": 8.719,
+      "mean_tokens": 12.0,
+      "total_cost_usd": 0.000126
+    },
+    "create_account": {
+      "n": 140,
+      "mean_latency_ms": 8.773,
+      "mean_tokens": 17.0,
+      "total_cost_usd": 0.000357
+    },
+    "create_contact": {
+      "n": 140,
+      "mean_latency_ms": 8.51,
+      "mean_tokens": 23.0,
+      "total_cost_usd": 0.000483
+    },
+    "create_opportunity": {
+      "n": 70,
+      "mean_latency_ms": 8.612,
+      "mean_tokens": 19.0,
+      "total_cost_usd": 0.000199
+    },
+    "create_product": {
+      "n": 140,
+      "mean_latency_ms": 8.756,
+      "mean_tokens": 15.0,
+      "total_cost_usd": 0.000315
+    },
+    "create_ticket": {
+      "n": 140,
+      "mean_latency_ms": 8.792,
+      "mean_tokens": 16.0,
+      "total_cost_usd": 0.000336
+    },
+    "delete_contact": {
+      "n": 70,
+      "mean_latency_ms": 8.55,
+      "mean_tokens": 10.0,
+      "total_cost_usd": 0.000105
+    },
+    "escalate_ticket": {
+      "n": 70,
+      "mean_latency_ms": 59.911,
+      "mean_tokens": 12.0,
+      "total_cost_usd": 0.000126
+    },
+    "transfer_stock": {
+      "n": 70,
+      "mean_latency_ms": 9.238,
+      "mean_tokens": 18.0,
+      "total_cost_usd": 0.000189
+    },
+    "update_account_tier": {
+      "n": 70,
+      "mean_latency_ms": 8.653,
+      "mean_tokens": 12.0,
+      "total_cost_usd": 0.000126
+    }
+  },
+  "flagged": [
+    "escalate_ticket"
+  ]
+}
