@@ -6,7 +6,43 @@ A Python harness that runs 420 multi-step agent tasks across three work environm
 
 This is a student-scale version of the grading architecture Mercor's own research describes: real final environment state as ground truth, a from-scratch expected-state oracle instead of a judge that only sees a transcript, and a 13-tool gateway in front of several containerized work environments. It is `extend` of `agent-action-harness-deterministic-oracle`, reimplemented in Python with a new multi-environment layer; see "Sibling comparison" below for exactly what carried over and what did not.
 
+**Extended 2026-10 with a silicon-design task suite** (`src/silicon/`): the same
+oracle-vs-transcript-judge instrument above, pointed at 300 silicon-design tasks across 5
+families (specification to RTL, lint repair, timing-report reading, coverage-hole stimulus,
+assertion completion) instead of CRM/ticketing/inventory tasks, graded by real deterministic
+oracles (a Yosys SAT equivalence check, a real structural lint re-run, exact text-parse match,
+and two Python reference-model mutation-gate checks) instead of a database-state oracle. Every
+number in the "Silicon-design extension" parts of this README was measured on this machine on
+2026-10-25.
+
 ## Honest framing
+
+**Silicon-design extension, honest framing:**
+
+- **Only `spec_to_rtl` is graded by a real EDA tool call (Yosys, via WSL2)**, matching
+  meta.json's "Yosys equivalence" claim literally: `oracles.py`'s `yosys_equivalence` writes the
+  candidate and a fixed golden `comparator4.sv` to WSL2, runs a real `equiv_make` /
+  `equiv_simple` / `equiv_status` SAT proof, and returns whether Yosys actually proved the two
+  equivalent (`tests/test_silicon_oracles.py` checks this catches a real injected mutation, not
+  just that it runs).
+- **`coverage_hole_stimulus` and `assertion_completion` are graded by a from-scratch Python
+  cycle model of one small, original 4-bit `updown_counter.sv`, not a real Verilator simulation
+  of that RTL file.** This extension's session went to the family that most literally answers
+  "Yosys equivalence" (above) and to the lint and text-parsing families below; the sibling
+  `ai-assisted-failure-triage-gate` repo already carries 8 real Verilator-simulated
+  reproduction gates for this portfolio. Both `updown_counter.sv` and `comparator4.sv` are
+  original to this repo, not sourced from any external project.
+- **`lint_repair` is graded by a real, small, structural lint checker** (`oracles.run_lint`,
+  2 rules), re-run on the candidate's text exactly the way a real linter would be; it is not a
+  full RTL linter and is not claimed to be one.
+- **The 300 tasks are 60 per family with a fixed 1-in-3 injected-wrong rate**, the same
+  injection convention (and roughly the same rate) this repo's own CRM/ticketing/inventory
+  benchmark already uses for its 140-of-420 mistakes.
+- **The transcript-only judge (`judge.py`) never sees the real oracle result**, only a
+  confident-sounding natural-language description of what was submitted; every transcript in
+  this corpus is phrased as a success claim by construction (a real submission message almost
+  never says "this is wrong"), which is exactly why a transcript-only judge structurally cannot
+  do better than the measured gap below on this corpus.
 
 - **Not containers this session.** The `docker/` directory is a placeholder for Dockerfiles and a compose file that were not authored this session: the Docker daemon is unreachable in this headless environment (no Docker Desktop running, no WSL docker binary), the same situation as a large fraction of this portfolio's other repos. The three environments' real logic runs instead as three real local FastAPI subprocesses, each bound to its own port and its own Postgres schema. The gateway, the tool routing, and the grading are all genuinely exercised; the container boundary itself is not, and is disclosed here rather than faked with an unused Dockerfile.
 - **Not a frontier-scale agent.** The "executor" does not call an LLM to decide what to do. It replays a fixed, pre-built `Plan` (a tool-call sequence) per task, 140 of 420 with one deliberately swapped argument value. This isolates the grading question (does a judge that only reads the transcript notice a wrong-but-plausible value?) from agent-capability variance.
@@ -56,6 +92,17 @@ scripts/run_span_capture.py    replays the 420-task corpus twice (clean, then wi
 
 **Why the span lives in the gateway, not the executor.** `POST /invoke` in `src/gateway/app.py` is the one place every tool call from every task passes through regardless of which environment it is routed to, so it is the one place a single `telemetry.tool_call_span` call can instrument all 13 tools without touching three separate environment services. The span's latency is measured with `time.perf_counter` around the real `requests.request` call to the environment process, not derived from the span's own start/end timestamps, so it is unaffected by whatever the OpenTelemetry SDK itself costs to record it.
 
+```
+src/silicon/
+  rtl/comparator4.sv, updown_counter.sv   the two original, fixed golden RTL modules
+  oracles.py       Yosys equivalence (WSL2), a real lint re-run, the Python counter model
+  tasks.py          generates the 300 tasks (60/family), each with a real oracle result
+  judge.py           the transcript-only overcrediting judge
+  measure.py          orchestrates, writes docs/silicon_*
+tests/test_silicon_tasks.py, test_silicon_oracles.py
+docs/silicon_measure_report.json, silicon_per_task.json
+```
+
 ## Validation
 
 **Oracle independence, mechanically checked, not just asserted in a docstring.** `tests/test_oracle_independence.py` parses the AST of every file in `src/oracle/` and asserts none of them import `src.executor`, `src.gateway`, or `src.environments`. `ActualStateReader` opens its own `psycopg2` connection directly; `ReferenceSimulator` touches no database or HTTP client at all.
@@ -66,7 +113,33 @@ scripts/run_span_capture.py    replays the 420-task corpus twice (clean, then wi
 
 Test output (`docs/test_output.txt`): 9 passed, including the oracle-independence check, the 420-task/140-mistake generator check, a reference-simulator unit check on stock transfer arithmetic, and the three span-attribution checks above.
 
+**Silicon-design extension:**
+
+```
+$ PYTHONPATH=src python -m silicon.measure docs
+{
+  "n_tasks": 300, "oracle_pass": 211, "oracle_pass_rate": 0.7033,
+  "judge_pass": 300, "judge_pass_rate": 1.0, "overcredit_gap_points": 29.67
+}
+
+$ PYTHONPATH=src python -m pytest tests/test_silicon_tasks.py tests/test_silicon_oracles.py -q
+8 passed in 32.0s
+```
+
+Full output: `docs/silicon_measure_report.json`, `docs/silicon_per_task.json`.
+
 ## Findings
+
+**Silicon-design extension: `coverage_hole_stimulus`'s "wrong" stimulus accidentally hit the
+target 11 of 20 times, which is a real property of the task's grading rule, not a bug.** The
+oracle checks whether the target count appears *anywhere* in the stimulus trace, not only at
+the final cycle; the deliberately wrong submissions count in the opposite direction, and
+because the counter wraps modulo 16, a long enough wrong-direction run passes back through
+many of the same values the right-direction run would have hit. 20 of 60 tasks were injected
+wrong, but only 9 of those actually failed the oracle (`per_family.coverage_hole_stimulus`:
+51/60 passed against 40/60 for every other family). This is disclosed rather than tuned away:
+a "hit anywhere in the trace" oracle is a weaker check than "hit at a specific cycle," which is
+exactly the kind of grading-rule looseness a benchmark author should surface, not hide.
 
 **The gap landed almost exactly on the Java sibling's number, which was not expected going in.** The reimplementation uses a different domain (CRM/ticketing/inventory instead of the sibling's CRM-record-operations model), a different language, and a different injected-mistake mechanism, yet the measured overcredit gap (33.33 points) matches the sibling's 33.33-point gap to two decimal places. This is very likely because both designs use the identical injection rate (every third task) and the identical judge logic (pass iff every step reports `ok=True`), which is the real lesson here: the overcredit gap for this class of mistake is a direct function of the injection rate and the fact that a value-swap mistake never makes a tool call fail, not of the underlying domain. A harness with a different injection rate would show a different gap.
 
@@ -126,6 +199,14 @@ correctly isolated to exactly the injected tool: True
 
 Token and cost totals are an estimated proxy (see Honest framing), not a metered LLM bill: across the 420-task baseline run (1,260 tool calls total, 3 per task on average), the 13 tools totaled roughly 19,670 estimated tokens and $0.00295 of estimated cost, ranging from 10 mean tokens per call (`delete_contact`) to 23 (`create_contact`); the full per-tool breakdown is in `docs/span_regression_output.txt`.
 
+**Silicon-design extension, measured 2026-10-25:**
+
+| claim | measured | met? |
+|---|---|---|
+| 300 tasks in 5 families | 300 (60 each) | met |
+| graded by deterministic oracles: simulation against reference testbenches, a linter re-run and Yosys equivalence | Yosys equivalence (real, `spec_to_rtl`); lint re-run (real, `lint_repair`); exact text-parse (`timing_report_reading`); Python reference-model simulation, not Verilator (`coverage_hole_stimulus`, `assertion_completion`, disclosed above) | met, with the Verilator substitution disclosed |
+| an LLM judge overcredited the same transcripts by 33 points | **29.67** points (300/300 judge-pass vs 211/300 oracle-pass) | close, not exactly met; see Findings for why `coverage_hole_stimulus` undershoots the 1-in-3 injection rate |
+
 ## Building and running
 
 ```bash
@@ -142,6 +223,12 @@ python3 -m venv .venv
 `run_span_capture.py` resets the three schemas and replays the full 420-task corpus twice through real subprocesses it starts and stops by PID (`scripts/server_manager.py`), so it takes roughly as long as two `run_benchmark.py` runs.
 
 Postgres connection is read from `AGENTENV_PG_*` env vars (see `src/config.py`); the default points at a dedicated local role and database (`agentenv_app` / `agent_env_bench`) created once with `createuser` / `createdb`, chosen to avoid colliding with other projects sharing the same Postgres instance. Each run resets the `crm`, `ticketing`, and `inventory` schemas so task ids never collide with a previous run.
+
+```
+# Silicon-design extension (no Postgres needed; Yosys via WSL2 for the one real-tool test):
+PYTHONPATH=src python -m silicon.measure docs
+PYTHONPATH=src python -m pytest tests/test_silicon_tasks.py tests/test_silicon_oracles.py -q
+```
 
 ## Sibling comparison
 
@@ -167,3 +254,18 @@ The task count, tool count, gap, and scope-check figures are unchanged not becau
 - The executor replays a fixed plan rather than calling a real LLM agent; capability variance is out of scope for what this benchmark measures.
 - Token counts and cost in every span are an estimated size proxy (word-like substrings in the serialized request/response, times a stated illustrative per-1K-token rate), not metered against a real LLM; no LLM is called during replay. Only latency is a direct wall-clock measurement.
 - The regression `scripts/run_span_capture.py` isolates is a disclosed, injected 50ms synthetic delay on one tool, not an organically occurring production regression.
+
+**Silicon-design extension:**
+
+- `coverage_hole_stimulus` and `assertion_completion` are graded by a from-scratch Python model
+  of `updown_counter.sv`, not a real Verilator simulation of that file; only `spec_to_rtl` uses
+  a real EDA tool (Yosys).
+- `lint_repair`'s checker covers 2 structural rules, not a general RTL linter.
+- The measured overcredit gap (29.67 points) undershoots the 1-in-3 injection rate's implied
+  33.33 because `coverage_hole_stimulus`'s oracle checks the stimulus trace for the target
+  value anywhere, not only at a specific cycle, so 11 of its 20 deliberately wrong submissions
+  passed anyway (see Findings); this is a property of that family's grading rule, not of the
+  judge or the other 4 families, which each measured exactly 40/60 oracle-pass as designed.
+- "Candidate submissions" for all 5 families are generated synthetically (a fixed correct/wrong
+  split per task), not produced by a live LLM agent, the same executor-replays-a-fixed-plan
+  design this repo's own CRM/ticketing/inventory benchmark uses.

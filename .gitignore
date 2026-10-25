@@ -23,3 +23,6 @@ dist/
 docs/otel_spans_baseline.jsonl
 docs/otel_spans_regressed.jsonl
 docs/otel_spans.jsonl
+
+# Scratch candidate file oracles.py writes transiently for Yosys equivalence checks
+src/silicon/rtl/_candidate_scratch.sv

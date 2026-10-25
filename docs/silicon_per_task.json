@@ -1,0 +1,2102 @@
+[
+  {
+    "task_id": "spec_to_rtl_000",
+    "family": "spec_to_rtl",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_001",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_002",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_003",
+    "family": "spec_to_rtl",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_004",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_005",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_006",
+    "family": "spec_to_rtl",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_007",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_008",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_009",
+    "family": "spec_to_rtl",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_010",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_011",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_012",
+    "family": "spec_to_rtl",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_013",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_014",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_015",
+    "family": "spec_to_rtl",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_016",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_017",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_018",
+    "family": "spec_to_rtl",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_019",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_020",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_021",
+    "family": "spec_to_rtl",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_022",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_023",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_024",
+    "family": "spec_to_rtl",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_025",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_026",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_027",
+    "family": "spec_to_rtl",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_028",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_029",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_030",
+    "family": "spec_to_rtl",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_031",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_032",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_033",
+    "family": "spec_to_rtl",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_034",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_035",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_036",
+    "family": "spec_to_rtl",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_037",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_038",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_039",
+    "family": "spec_to_rtl",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_040",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_041",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_042",
+    "family": "spec_to_rtl",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_043",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_044",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_045",
+    "family": "spec_to_rtl",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_046",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_047",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_048",
+    "family": "spec_to_rtl",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_049",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_050",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_051",
+    "family": "spec_to_rtl",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_052",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_053",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_054",
+    "family": "spec_to_rtl",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_055",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_056",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_057",
+    "family": "spec_to_rtl",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_058",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "spec_to_rtl_059",
+    "family": "spec_to_rtl",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_000",
+    "family": "lint_repair",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_001",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_002",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_003",
+    "family": "lint_repair",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_004",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_005",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_006",
+    "family": "lint_repair",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_007",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_008",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_009",
+    "family": "lint_repair",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_010",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_011",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_012",
+    "family": "lint_repair",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_013",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_014",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_015",
+    "family": "lint_repair",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_016",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_017",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_018",
+    "family": "lint_repair",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_019",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_020",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_021",
+    "family": "lint_repair",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_022",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_023",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_024",
+    "family": "lint_repair",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_025",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_026",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_027",
+    "family": "lint_repair",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_028",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_029",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_030",
+    "family": "lint_repair",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_031",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_032",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_033",
+    "family": "lint_repair",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_034",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_035",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_036",
+    "family": "lint_repair",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_037",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_038",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_039",
+    "family": "lint_repair",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_040",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_041",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_042",
+    "family": "lint_repair",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_043",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_044",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_045",
+    "family": "lint_repair",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_046",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_047",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_048",
+    "family": "lint_repair",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_049",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_050",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_051",
+    "family": "lint_repair",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_052",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_053",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_054",
+    "family": "lint_repair",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_055",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_056",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_057",
+    "family": "lint_repair",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_058",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "lint_repair_059",
+    "family": "lint_repair",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_000",
+    "family": "timing_report_reading",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_001",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_002",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_003",
+    "family": "timing_report_reading",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_004",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_005",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_006",
+    "family": "timing_report_reading",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_007",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_008",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_009",
+    "family": "timing_report_reading",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_010",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_011",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_012",
+    "family": "timing_report_reading",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_013",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_014",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_015",
+    "family": "timing_report_reading",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_016",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_017",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_018",
+    "family": "timing_report_reading",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_019",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_020",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_021",
+    "family": "timing_report_reading",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_022",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_023",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_024",
+    "family": "timing_report_reading",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_025",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_026",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_027",
+    "family": "timing_report_reading",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_028",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_029",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_030",
+    "family": "timing_report_reading",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_031",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_032",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_033",
+    "family": "timing_report_reading",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_034",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_035",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_036",
+    "family": "timing_report_reading",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_037",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_038",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_039",
+    "family": "timing_report_reading",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_040",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_041",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_042",
+    "family": "timing_report_reading",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_043",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_044",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_045",
+    "family": "timing_report_reading",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_046",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_047",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_048",
+    "family": "timing_report_reading",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_049",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_050",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_051",
+    "family": "timing_report_reading",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_052",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_053",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_054",
+    "family": "timing_report_reading",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_055",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_056",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_057",
+    "family": "timing_report_reading",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_058",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "timing_report_reading_059",
+    "family": "timing_report_reading",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_000",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": true,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_001",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_002",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_003",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_004",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_005",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_006",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_007",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_008",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_009",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": true,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_010",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_011",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_012",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": true,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_013",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_014",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_015",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": true,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_016",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_017",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_018",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_019",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_020",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_021",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_022",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_023",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_024",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": true,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_025",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_026",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_027",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": true,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_028",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_029",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_030",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": true,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_031",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_032",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_033",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_034",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_035",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_036",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_037",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_038",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_039",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_040",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_041",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_042",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": true,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_043",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_044",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_045",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": true,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_046",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_047",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_048",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": true,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_049",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_050",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_051",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_052",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_053",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_054",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_055",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_056",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_057",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": true,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_058",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "coverage_hole_stimulus_059",
+    "family": "coverage_hole_stimulus",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_000",
+    "family": "assertion_completion",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_001",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_002",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_003",
+    "family": "assertion_completion",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_004",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_005",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_006",
+    "family": "assertion_completion",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_007",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_008",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_009",
+    "family": "assertion_completion",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_010",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_011",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_012",
+    "family": "assertion_completion",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_013",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_014",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_015",
+    "family": "assertion_completion",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_016",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_017",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_018",
+    "family": "assertion_completion",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_019",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_020",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_021",
+    "family": "assertion_completion",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_022",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_023",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_024",
+    "family": "assertion_completion",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_025",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_026",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_027",
+    "family": "assertion_completion",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_028",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_029",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_030",
+    "family": "assertion_completion",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_031",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_032",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_033",
+    "family": "assertion_completion",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_034",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_035",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_036",
+    "family": "assertion_completion",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_037",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_038",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_039",
+    "family": "assertion_completion",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_040",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_041",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_042",
+    "family": "assertion_completion",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_043",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_044",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_045",
+    "family": "assertion_completion",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_046",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_047",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_048",
+    "family": "assertion_completion",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_049",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_050",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_051",
+    "family": "assertion_completion",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_052",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_053",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_054",
+    "family": "assertion_completion",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_055",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_056",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_057",
+    "family": "assertion_completion",
+    "is_wrong": true,
+    "oracle_result": false,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_058",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  },
+  {
+    "task_id": "assertion_completion_059",
+    "family": "assertion_completion",
+    "is_wrong": false,
+    "oracle_result": true,
+    "judge_result": true
+  }
+]

@@ -1,0 +1,42 @@
+{
+  "n_tasks": 300,
+  "n_families": 5,
+  "n_per_family": 60,
+  "oracle_pass": 211,
+  "oracle_pass_rate": 0.7033333333333334,
+  "judge_pass": 300,
+  "judge_pass_rate": 1.0,
+  "overcredit_gap_points": 29.67,
+  "per_family": {
+    "spec_to_rtl": {
+      "n": 60,
+      "oracle_pass": 40,
+      "judge_pass": 60,
+      "n_wrong_injected": 20
+    },
+    "lint_repair": {
+      "n": 60,
+      "oracle_pass": 40,
+      "judge_pass": 60,
+      "n_wrong_injected": 20
+    },
+    "timing_report_reading": {
+      "n": 60,
+      "oracle_pass": 40,
+      "judge_pass": 60,
+      "n_wrong_injected": 20
+    },
+    "coverage_hole_stimulus": {
+      "n": 60,
+      "oracle_pass": 51,
+      "judge_pass": 60,
+      "n_wrong_injected": 20
+    },
+    "assertion_completion": {
+      "n": 60,
+      "oracle_pass": 40,
+      "judge_pass": 60,
+      "n_wrong_injected": 20
+    }
+  }
+}
