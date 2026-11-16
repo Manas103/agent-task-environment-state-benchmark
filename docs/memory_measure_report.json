@@ -1,0 +1,53 @@
+{
+  "n_target_users": 60,
+  "n_distractor_users": 1000,
+  "total_tasks": 240,
+  "per_quality": {
+    "recall": {
+      "total": 60,
+      "oracle_pass": 28,
+      "oracle_pass_pct": 46.67,
+      "judge_pass": 60,
+      "judge_pass_pct": 100.0
+    },
+    "freshness": {
+      "total": 60,
+      "oracle_pass": 16,
+      "oracle_pass_pct": 26.67,
+      "judge_pass": 60,
+      "judge_pass_pct": 100.0
+    },
+    "isolation": {
+      "total": 60,
+      "oracle_pass": 60,
+      "oracle_pass_pct": 100.0,
+      "judge_pass": 60,
+      "judge_pass_pct": 100.0
+    },
+    "abstention": {
+      "total": 60,
+      "oracle_pass": 60,
+      "oracle_pass_pct": 100.0,
+      "judge_pass": 60,
+      "judge_pass_pct": 100.0
+    }
+  },
+  "overall": {
+    "oracle_pass_pct": 68.33,
+    "judge_pass_pct": 100.0,
+    "overcredit_gap_points": 31.67
+  },
+  "isolation_non_vacuousness": {
+    "probed": 60,
+    "would_leak_without_scope": 60,
+    "would_leak_pct": 100.0
+  },
+  "spans": {
+    "n_spans": 1440,
+    "elapsed_s": 0.139,
+    "throughput_reads_per_sec": 1726.02,
+    "avg_latency_ms": 0.4508,
+    "avg_cost_usd_per_session": 2.439e-05,
+    "total_cost_usd": 0.0351258
+  }
+}

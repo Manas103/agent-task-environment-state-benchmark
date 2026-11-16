@@ -26,3 +26,7 @@ docs/otel_spans.jsonl
 
 # Scratch candidate file oracles.py writes transiently for Yosys equivalence checks
 src/silicon/rtl/_candidate_scratch.sv
+
+# Full 1,440-span memory-extension capture (regenerate with: python -m src.memory.measure docs);
+# only the first-130-line sample (memory_otel_spans_sample.jsonl) is tracked.
+docs/memory_otel_spans.jsonl

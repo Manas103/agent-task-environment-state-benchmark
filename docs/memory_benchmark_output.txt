@@ -1,0 +1,17 @@
+tasks: 240 (60 target users x 4 qualities), 1000 distractor users
+
+per-quality oracle vs judge pass rate:
+  recall      oracle 28/60 (46.67%)  judge 60/60 (100.0%)
+  freshness   oracle 16/60 (26.67%)  judge 60/60 (100.0%)
+  isolation   oracle 60/60 (100.0%)  judge 60/60 (100.0%)
+  abstention  oracle 60/60 (100.0%)  judge 60/60 (100.0%)
+
+overall oracle pass: 68.33%
+overall judge pass:  100.0%
+overcredit gap: 31.67 points
+
+isolation non-vacuousness: without the per-user scope, 60/60 probed queries would have surfaced a distractor's fact first (100.0%)
+
+spans: 1440 reads in 0.139s (1726.02 reads/sec)
+avg read latency: 0.4508 ms
+avg cost/session: $2.439e-05

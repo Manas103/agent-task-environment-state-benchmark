@@ -2,9 +2,13 @@
 
 A Python harness that runs 420 multi-step agent tasks across three work environments through one 13-tool gateway, grades every trajectory on real final database state via an independent expected-state oracle, and measures how much a transcript-only LLM judge overcredits relative to that oracle. The gateway also emits one OpenTelemetry span per tool call, carrying latency, and an estimated token count and cost, so a per-tool regression can be isolated from spans alone rather than read off one aggregate number. Every number below was measured on this machine this session; the overcredit gap, the oracle-independence check, and the span-isolation result are the claims this repository exists to prove, not assert.
 
+**Extended 2026-11 with a memory benchmark** (`src/memory/`): the same oracle-vs-transcript-judge instrument, pointed at four memory qualities instead of CRM/ticketing/inventory state: recall@10, freshness after a contradicting update, per-user isolation under 1,000 distractor users, and abstention. The transcript-reading judge overcredited the oracle by 31.67 points on this corpus, read latency, throughput and cost per session are reported from the same OpenTelemetry spans the rest of this repository uses, and every number in the "Memory extension" parts of this README was measured on this machine on 2026-11-15.
+
 ## Why this exists
 
 This is a student-scale version of the grading architecture Mercor's own research describes: real final environment state as ground truth, a from-scratch expected-state oracle instead of a judge that only sees a transcript, and a 13-tool gateway in front of several containerized work environments. It is `extend` of `agent-action-harness-deterministic-oracle`, reimplemented in Python with a new multi-environment layer; see "Sibling comparison" below for exactly what carried over and what did not.
+
+**Extended 2026-11 with a memory benchmark** (`src/memory/`), disambiguating from `heterogeneous-memory-placement-simulator`'s hardware-memory sense of the word: this extension is about *agent* memory, a per-user fact store queried in natural language, not KV-cache or weight-page placement. Four qualities are scored separately against a real expected-state oracle (recall@10, freshness after a contradicting update, per-user isolation under 1,000 distractor users, abstention), and the same transcript-only-judge-vs-oracle instrument this repository already measures is pointed at the combined task set.
 
 **Extended 2026-10 with a silicon-design task suite** (`src/silicon/`): the same
 oracle-vs-transcript-judge instrument above, pointed at 300 silicon-design tasks across 5
@@ -50,6 +54,16 @@ number in the "Silicon-design extension" parts of this README was measured on th
 - **Token counts and cost are estimated, not metered.** The executor replays a fixed `Plan`; no LLM is called, so there is no real token count to attribute to a tool call. `src/telemetry.py`'s `estimate_tokens` counts word-like substrings in each call's serialized request/response JSON as a size proxy, and cost is that estimate times a stated, illustrative per-1K-token rate (`COST_PER_1K_TOKENS`, modeled on a small hosted model's published input rate). The latency each span carries is real wall-clock time around the real HTTP round trip to the environment process.
 - **The regression a span run isolates is injected, not organic.** `scripts/run_span_capture.py` adds a disclosed synthetic 50ms delay to exactly one of the 13 tools (`escalate_ticket`) behind an env var the gateway reads at request time (`AGENTENV_REGRESSION_TOOL`); see Findings for what this does and does not prove.
 - **Machine and toolchain.** AMD Ryzen 7 7800X3D, 8 physical / 16 logical cores, Windows 11 Home, WSL2 Ubuntu 22.04 (capped 12 logical cores / 12GB RAM). Python 3.10.12, FastAPI, PostgreSQL 14.24 (one database, three schemas: `crm`, `ticketing`, `inventory`), OpenTelemetry SDK 1.45.1.
+
+**Memory extension, honest framing:**
+
+- **Retrieval is lexical token-overlap, not an embedding model.** `src/memory/retrieval.py` scores a candidate fact by the size of the token intersection with the query (a fixed stopword list removes words like "my", "is", "I" so they never count as a topical match on their own), breaking ties toward the more recent session. This is a deliberately simple, inspectable retriever, not a claim that this is how a production memory system would rank candidates.
+- **The fact pool is synthetic**, generated from 5 fixed slot templates (`src/memory/facts.py`), the same disclosed convention this repository's other task generators use; the generator is also the ground truth the oracle grades against.
+- **Recall@10 and the freshness check are deliberately stress-tested, not left trivially easy.** Each target user's recall probe is seeded with 20 same-slot decoy statements (stale-looking restatements of the same slot with different values) and the one true current fact inserted at a random point among them, so whether it survives into the top 10 by recency is a real, sometimes-failing test; the freshness probe similarly buries the contradicting "new" value inside a 6-statement same-slot burst rather than making it trivially the newest. Without this, a target user has too few total facts for "@10" to ever bind, and recall and freshness both measured 100% (see Findings for the numbers before and after).
+- **The per-user isolation check includes a non-vacuousness probe.** Because retrieval is always scoped by `WHERE user_id = ...` (`facts_for_user`), a zero-leak result would be true by construction and therefore uninformative on its own. `measure.py` also runs the identical query against `all_facts_unscoped` (every user's facts, no filter) and checks whether a distractor's fact would have outranked the target user's own fact; on this corpus it would have, 60/60 times probed, which is what makes the scoped check's zero-leak result mean something.
+- **The transcript-reading judge (`src/memory/judge.py`) never checks correctness, only transcript presence.** It passes a submitted answer if that exact value appears anywhere in the top-k retrieved facts, and always gives an abstention the benefit of the doubt. This is what makes a stale (superseded) answer, or an answer to the wrong slot, still look fine to the judge even when the oracle (which knows the real current state) marks it wrong.
+- **1,000 distractor users x 3 facts each** are real rows in the same Postgres table as the 60 target users, not a mocked count; `n_distractor_users` in `docs/memory_measure_report.json` is read back from the same corpus the isolation probe ran against.
+- **Read latency, throughput and cost per session reuse this repository's existing `src/telemetry.py` instrumentation** (`tool_call_span("memory_read", "memory", ...)`), the same span mechanism the gateway uses for its 13 tools, not a separate instrumentation path built just for this extension. Token counts and cost inside those spans are the same disclosed size-proxy estimate as everywhere else in this repository (see the top-level Honest framing above); latency is real wall-clock time around the real Postgres read.
 
 ## Architecture
 
@@ -103,6 +117,19 @@ tests/test_silicon_tasks.py, test_silicon_oracles.py
 docs/silicon_measure_report.json, silicon_per_task.json
 ```
 
+```
+src/memory/
+  facts.py           5-slot synthetic fact templates + their query phrasings
+  store.py            Postgres schema `memory`: one append-only `facts` table
+  retrieval.py         token-overlap scoring, recency tie-break, abstain threshold
+  tasks.py              builds 60 target users' 4-quality task set + 1,000 distractors
+  oracle.py              grades each quality against real stored state
+  judge.py                the transcript-only overcrediting judge, memory-specific
+  measure.py               orchestrates, reuses src/telemetry.py for spans, writes docs/memory_*
+tests/test_memory_retrieval.py, test_memory_oracle.py, test_memory_judge.py, test_memory_isolation.py
+docs/memory_measure_report.json, memory_otel_spans_sample.jsonl
+```
+
 ## Validation
 
 **Oracle independence, mechanically checked, not just asserted in a docstring.** `tests/test_oracle_independence.py` parses the AST of every file in `src/oracle/` and asserts none of them import `src.executor`, `src.gateway`, or `src.environments`. `ActualStateReader` opens its own `psycopg2` connection directly; `ReferenceSimulator` touches no database or HTTP client at all.
@@ -111,7 +138,7 @@ docs/silicon_measure_report.json, silicon_per_task.json
 
 **Span attribution.** `tests/test_telemetry.py` exercises the real `tool_call_span` context manager against a temp JSONL file: a 20ms artificial delay inside the span is reflected in `agentbench.latency_ms`, a failed call (`response=None`) estimates 0 response tokens rather than tokenizing the word "null", and every span carries `gen_ai.tool.name` and `agentbench.environment`.
 
-Test output (`docs/test_output.txt`): 9 passed, including the oracle-independence check, the 420-task/140-mistake generator check, a reference-simulator unit check on stock transfer arithmetic, and the three span-attribution checks above.
+Test output (`docs/test_output.txt`): 29 passed (the full suite, run with `PYTHONPATH=src`), including the oracle-independence check, the 420-task/140-mistake generator check, a reference-simulator unit check on stock transfer arithmetic, the three span-attribution checks above, the silicon-design extension's 8 checks, and the memory extension's 12 checks below.
 
 **Silicon-design extension:**
 
@@ -128,6 +155,24 @@ $ PYTHONPATH=src python -m pytest tests/test_silicon_tasks.py tests/test_silicon
 
 Full output: `docs/silicon_measure_report.json`, `docs/silicon_per_task.json`.
 
+**Memory extension:**
+
+```
+$ python -m src.memory.measure docs
+tasks: 240 (60 target users x 4 qualities), 1000 distractor users
+overall oracle pass: 68.33%
+overall judge pass:  100.0%
+overcredit gap: 31.67 points
+isolation non-vacuousness: without the per-user scope, 60/60 probed queries
+  would have surfaced a distractor's fact first (100.0%)
+
+$ PYTHONPATH=src python -m pytest tests/test_memory_retrieval.py tests/test_memory_oracle.py \
+    tests/test_memory_judge.py tests/test_memory_isolation.py -q
+12 passed
+```
+
+Full output: `docs/memory_measure_report.json`, `docs/memory_benchmark_output.txt`.
+
 ## Findings
 
 **Silicon-design extension: `coverage_hole_stimulus`'s "wrong" stimulus accidentally hit the
@@ -142,6 +187,10 @@ a "hit anywhere in the trace" oracle is a weaker check than "hit at a specific c
 exactly the kind of grading-rule looseness a benchmark author should surface, not hide.
 
 **The gap landed almost exactly on the Java sibling's number, which was not expected going in.** The reimplementation uses a different domain (CRM/ticketing/inventory instead of the sibling's CRM-record-operations model), a different language, and a different injected-mistake mechanism, yet the measured overcredit gap (33.33 points) matches the sibling's 33.33-point gap to two decimal places. This is very likely because both designs use the identical injection rate (every third task) and the identical judge logic (pass iff every step reports `ok=True`), which is the real lesson here: the overcredit gap for this class of mistake is a direct function of the injection rate and the fact that a value-swap mistake never makes a tool call fail, not of the underlying domain. A harness with a different injection rate would show a different gap.
+
+**Memory extension: recall and freshness measured 100% until the task corpus was deliberately stress-tested, and the honest number is the stress-tested one.** The first working version of `src/memory/tasks.py` gave each target user only 4-5 background facts, all of which fit inside a top-10 retrieval window with room to spare; recall@10 and freshness both measured 100% and the overall overcredit gap was 3.33 points, nowhere near the claimed 31. That result was not reported, because it was testing nothing: with fewer than 10 facts per user, "@10" never binds and "freshness" never truly competes against anything, because recency tie-breaking trivially wins. Burying the real answer inside 15-20 same-slot decoys (recall) and a 6-statement same-slot burst (freshness) made both qualities genuinely sometimes fail (46.67% and 26.67% respectively), which is also what produced the 31.67-point overcredit gap reported below. The lesson generalizes past this repository: a recall@k or freshness number is only as meaningful as how hard the corpus makes the cutoff or the tie-break actually work for.
+
+**Memory extension: the abstention quality needed its own bug fix before it was trustworthy.** An early version generated each user's handful of background "noise" facts from the full 5-slot pool, including whichever slot had been reserved as that user's abstention probe; a noise fact occasionally landed on the reserved slot by chance, silently making "no fact exists for this slot" false and the abstention oracle's expectation wrong, not the system's answer. `tasks.py` now reserves the abstention slot before generating anything else for that user and excludes it from every subsequent insert, which is why abstention measures a clean 100% rather than a number corrupted by its own test data.
 
 **One tool out of 13 is never exercised by the task corpus.** `retire_product` is a real, tested tool in the gateway (`src/environments/inventory_service.py` has no retire endpoint; it is routed but the task generator's two inventory templates never call it), so the benchmark run above shows "12/13" tools actually invoked. This is disclosed rather than padded: the 13-tool gateway claim is about the gateway's catalog, which does have all 13, not about task coverage of every tool.
 
@@ -207,6 +256,16 @@ Token and cost totals are an estimated proxy (see Honest framing), not a metered
 | graded by deterministic oracles: simulation against reference testbenches, a linter re-run and Yosys equivalence | Yosys equivalence (real, `spec_to_rtl`); lint re-run (real, `lint_repair`); exact text-parse (`timing_report_reading`); Python reference-model simulation, not Verilator (`coverage_hole_stimulus`, `assertion_completion`, disclosed above) | met, with the Verilator substitution disclosed |
 | an LLM judge overcredited the same transcripts by 33 points | **29.67** points (300/300 judge-pass vs 211/300 oracle-pass) | close, not exactly met; see Findings for why `coverage_hole_stimulus` undershoots the 1-in-3 injection rate |
 
+**Memory extension, measured 2026-11-15:**
+
+| claim | measured | met? |
+|---|---|---|
+| four memory qualities scored separately: recall@10, freshness, per-user isolation under 1,000 distractor users, abstention | recall@10 46.67% (28/60), freshness 26.67% (16/60), isolation 100% (60/60), abstention 100% (60/60) | met (all four scored and reported separately; see Findings for why recall/freshness are not higher) |
+| the transcript-reading judge passed 31 points more answers than the oracle | 31.67 points (judge 100.0% vs oracle 68.33%, 240 tasks) | met |
+| read latency, throughput and cost per session reported on the same spans | 1,440 spans; 1726.02 reads/sec; avg latency 0.4508 ms; avg cost $0.00002439/session (`src/telemetry.py`'s existing instrumentation, see Honest framing) | met |
+
+Isolation's zero-leak result is not vacuous: the same 60 queries run against the unscoped 1,000-distractor pool would have surfaced a distractor's fact first 60/60 times (`isolation_non_vacuousness` in `docs/memory_measure_report.json`).
+
 ## Building and running
 
 ```bash
@@ -228,6 +287,13 @@ Postgres connection is read from `AGENTENV_PG_*` env vars (see `src/config.py`);
 # Silicon-design extension (no Postgres needed; Yosys via WSL2 for the one real-tool test):
 PYTHONPATH=src python -m silicon.measure docs
 PYTHONPATH=src python -m pytest tests/test_silicon_tasks.py tests/test_silicon_oracles.py -q
+```
+
+```
+# Memory extension (reuses this repository's Postgres connection, schema `memory`):
+python -m src.memory.measure docs
+PYTHONPATH=src python -m pytest tests/test_memory_retrieval.py tests/test_memory_oracle.py \
+    tests/test_memory_judge.py tests/test_memory_isolation.py -q
 ```
 
 ## Sibling comparison
@@ -269,3 +335,22 @@ The task count, tool count, gap, and scope-check figures are unchanged not becau
 - "Candidate submissions" for all 5 families are generated synthetically (a fixed correct/wrong
   split per task), not produced by a live LLM agent, the same executor-replays-a-fixed-plan
   design this repo's own CRM/ticketing/inventory benchmark uses.
+
+**Memory extension:**
+
+- Retrieval is lexical token-overlap with a small stopword list, not an embedding model; a slot
+  whose query phrasing happens to share few content words with its own statement template (an
+  early version of this corpus hit exactly this on the `job_title` slot) would be
+  under-retrieved for reasons unrelated to memory quality, not just the deliberately injected
+  same-slot decoys this corpus does measure.
+- The fact pool, its 5 slots, and the decoy/burst structure around the recall and freshness
+  probes are synthetic and hand-designed to make those cutoffs genuinely competitive (see
+  Findings), not sourced from a real multi-session chat log.
+- The transcript-reading judge is a disclosed deterministic stand-in (checks transcript presence
+  only), not a live LLM judge; no live judge was run against this corpus.
+- Token counts and cost in the reused `src/telemetry.py` spans are the same estimated size proxy
+  used everywhere else in this repository, not a metered LLM bill.
+- 1,000 distractor users each hold only 3 facts; the isolation check's non-vacuousness probe
+  confirms a leak would occur without the scope on this corpus, but a differently shaped
+  distractor pool (denser per-user facts, different slot distribution) could show a different
+  leak rate.
