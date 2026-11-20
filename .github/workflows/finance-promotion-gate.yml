@@ -1,0 +1,41 @@
+# Authored and YAML-validated this session; not run on a live GitHub Actions
+# runner (no Postgres service container was started here, see
+# docs/ci_workflow_validation.txt). The gate script it runs
+# (scripts/run_finance_promotion_gate.py) was run directly on this machine instead;
+# see docs/promotion_gate_output.txt.
+name: finance-promotion-gate
+
+on:
+  pull_request:
+    paths:
+      - "src/finance/**"
+      - "scripts/run_finance_benchmark.py"
+      - "scripts/run_finance_promotion_gate.py"
+
+jobs:
+  promotion-gate:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:14
+        env:
+          POSTGRES_USER: agentenv_app
+          POSTGRES_PASSWORD: agentenv_pw
+          POSTGRES_DB: agent_env_bench
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - run: pip install -r requirements.txt
+      - run: PYTHONPATH=src python -m pytest tests/test_finance_tasks.py tests/test_finance_oracle.py tests/test_finance_oracle_independence.py tests/test_finance_judge.py tests/test_finance_permission.py tests/test_finance_promotion_gate.py -q
+      - run: python scripts/run_finance_benchmark.py docs
+      - name: Promotion gate
+        run: python scripts/run_finance_promotion_gate.py

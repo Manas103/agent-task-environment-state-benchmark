@@ -1,0 +1,9 @@
+=== second run, unchanged, should promote ===
+PROMOTE: current per-family accuracy {'invoice_three_way_match': 66.67, 'expense_report_approval': 66.67, 'vendor_master_update': 66.67, 'budget_transfer_posting': 66.67, 'close_task_completion': 66.67}
+baseline: {'budget_transfer_posting': 66.67, 'close_task_completion': 66.67, 'expense_report_approval': 66.67, 'invoice_three_way_match': 66.67, 'vendor_master_update': 66.67}
+exit=0
+
+=== simulated regression on vendor_master_update (-20 pct), should block ===
+BLOCKED: regressed families: ['vendor_master_update']
+  vendor_master_update: baseline 66.67% -> current 46.67%
+exit=1

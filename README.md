@@ -4,6 +4,8 @@ A Python harness that runs 420 multi-step agent tasks across three work environm
 
 **Extended 2026-11 with a memory benchmark** (`src/memory/`): the same oracle-vs-transcript-judge instrument, pointed at four memory qualities instead of CRM/ticketing/inventory state: recall@10, freshness after a contradicting update, per-user isolation under 1,000 distractor users, and abstention. The transcript-reading judge overcredited the oracle by 31.67 points on this corpus, read latency, throughput and cost per session are reported from the same OpenTelemetry spans the rest of this repository uses, and every number in the "Memory extension" parts of this README was measured on this machine on 2026-11-15.
 
+**Extended 2026-11-20 with a finance-workflow benchmark and a CI promotion gate** (`src/finance/`): the same oracle-vs-transcript-judge instrument, pointed at 420 finance tasks across 5 skill families (invoice three-way match, expense-report approval, vendor master update, budget-transfer posting, close-task completion) instead of CRM/ticketing/inventory state, plus a new capability the other extensions do not have: `scripts/run_finance_promotion_gate.py` compares a run's per-family accuracy against a committed baseline and blocks promotion the moment any family regresses. The transcript-only judge overcredited the oracle by 33.33 points, a 120-plan adversarial suite (one role per family) was refused 120/120, and every number in the "Finance-workflow extension" parts of this README was measured on this machine on 2026-11-20.
+
 ## Why this exists
 
 This is a student-scale version of the grading architecture Mercor's own research describes: real final environment state as ground truth, a from-scratch expected-state oracle instead of a judge that only sees a transcript, and a 13-tool gateway in front of several containerized work environments. It is `extend` of `agent-action-harness-deterministic-oracle`, reimplemented in Python with a new multi-environment layer; see "Sibling comparison" below for exactly what carried over and what did not.
@@ -130,6 +132,70 @@ tests/test_memory_retrieval.py, test_memory_oracle.py, test_memory_judge.py, tes
 docs/memory_measure_report.json, memory_otel_spans_sample.jsonl
 ```
 
+```
+src/finance/
+  schema.py        Postgres schema `finance_ops`: 10 tables, 5 of them the
+                    "true" reference data (purchase_orders, receipts,
+                    employees, vendors' requested accounts via the task
+                    itself, budget_transfers' requested destination,
+                    evidence_registry) a correct tool call should read and a
+                    mistake-injected one substitutes
+  tools.py           the 5 skill-family tools, one each, each deliberately
+                      naive about its own arguments (see Honest framing)
+  tasks.py            builds the 420-task corpus, 84 per family, 28 (1 in 3)
+                        with one argument swapped for a wrong-but-plausible
+                        value; each Task carries its own expected_value,
+                        computed from the true seed data at generation time
+  oracle.py             reads the one real Postgres field each family's tool
+                         wrote and compares it to the Task's expected value;
+                         imports nothing from tools.py
+                         (tests/test_finance_oracle_independence.py)
+  judge.py                the transcript-only judge: passes iff the tool's
+                           own return said ok=True (always true here)
+  permission.py             5 family-scoped roles, plus the 120-plan (24 per
+                             role) adversarial out-of-scope suite
+  baseline.py                loads/saves config/finance_baseline.json, the
+                              per-family accuracy baseline the promotion
+                              gate compares a new run against
+  measure.py                  orchestrates: 420-task benchmark, 120-plan
+                               adversarial suite, writes docs/finance_*
+scripts/
+  run_finance_benchmark.py       the 420-task + 120-plan measurement run
+  run_finance_promotion_gate.py    compares a run's per-family accuracy to
+                                     the committed baseline; blocks and names
+                                     every regressed family, or promotes
+docker/Dockerfile.finance        authored, not built (daemon unreachable)
+.github/workflows/finance-promotion-gate.yml   authored, YAML-validated,
+                                                  not run on a live runner
+tests/test_finance_tasks.py, test_finance_oracle.py,
+  test_finance_oracle_independence.py, test_finance_judge.py,
+  test_finance_permission.py, test_finance_promotion_gate.py
+docs/finance_measure_report.json, finance_benchmark_output.txt,
+  promotion_gate_output.txt, finance_ci_workflow_validation.txt
+config/finance_baseline.json   the committed accuracy baseline
+```
+
+**Why the mistake is always a guaranteed flip, not a random perturbation
+(`tasks.py`).** Each family's true seed data is constructed so the honest,
+uncorrupted tool call always lands on one side of the family's decision (a
+three-way match within tolerance, an expense under its true cap, the
+requested bank account, the requested destination cost center, the matching
+evidence document); the one swapped argument for a mistake task is chosen far
+enough from the true value that it always lands on the other side (an
+invoice matched against a PO quoted 10% high, a cap from a cheaper category,
+another task's account, another task's cost center, another task's evidence
+document). This is what makes the oracle catch all 140 injected mistakes and
+none of the 280 correct tasks deterministically, rather than only on average.
+
+**Why the oracle trusts the Task's own `expected_value` instead of
+re-deriving it from raw tables at grading time (`oracle.py`).** The same
+convention `src/memory/oracle.py` uses: the generator (`tasks.py`) is the
+independent source of truth, computed once from the true seed data before any
+mistake is injected and before any tool runs; the oracle's only job is to
+read back the one real field the tool actually wrote and compare it, which is
+enough to catch a wrong write without needing its own second copy of each
+family's business rule.
+
 ## Validation
 
 **Oracle independence, mechanically checked, not just asserted in a docstring.** `tests/test_oracle_independence.py` parses the AST of every file in `src/oracle/` and asserts none of them import `src.executor`, `src.gateway`, or `src.environments`. `ActualStateReader` opens its own `psycopg2` connection directly; `ReferenceSimulator` touches no database or HTTP client at all.
@@ -138,7 +204,7 @@ docs/memory_measure_report.json, memory_otel_spans_sample.jsonl
 
 **Span attribution.** `tests/test_telemetry.py` exercises the real `tool_call_span` context manager against a temp JSONL file: a 20ms artificial delay inside the span is reflected in `agentbench.latency_ms`, a failed call (`response=None`) estimates 0 response tokens rather than tokenizing the word "null", and every span carries `gen_ai.tool.name` and `agentbench.environment`.
 
-Test output (`docs/test_output.txt`): 29 passed (the full suite, run with `PYTHONPATH=src`), including the oracle-independence check, the 420-task/140-mistake generator check, a reference-simulator unit check on stock transfer arithmetic, the three span-attribution checks above, the silicon-design extension's 8 checks, and the memory extension's 12 checks below.
+Test output (`docs/test_output.txt`): 42 passed (the full suite, run with `PYTHONPATH=src`), including the oracle-independence check, the 420-task/140-mistake generator check, a reference-simulator unit check on stock transfer arithmetic, the three span-attribution checks above, the silicon-design extension's 8 checks, the memory extension's 12 checks below, and the finance-workflow extension's 13 checks further below.
 
 **Silicon-design extension:**
 
@@ -173,6 +239,41 @@ $ PYTHONPATH=src python -m pytest tests/test_memory_retrieval.py tests/test_memo
 
 Full output: `docs/memory_measure_report.json`, `docs/memory_benchmark_output.txt`.
 
+**Finance-workflow extension:**
+
+```
+$ PYTHONPATH=src .venv/Scripts/python.exe -m pytest tests/test_finance_tasks.py tests/test_finance_oracle.py \
+    tests/test_finance_oracle_independence.py tests/test_finance_judge.py tests/test_finance_permission.py \
+    tests/test_finance_promotion_gate.py -v
+13 passed
+
+$ .venv/Scripts/python.exe scripts/run_finance_benchmark.py docs
+total tasks: 420
+mistakes injected: 140
+mistakes caught by oracle: 140/140
+overall oracle pass: 66.67%
+overall judge pass:  100.0%
+overcredit gap: 33.33 points
+adversarial scope-refusal plans: 120
+refused: 120
+allowed through (should be 0): 0
+```
+
+Full output: `docs/finance_measure_report.json`, `docs/finance_benchmark_output.txt`.
+
+**Promotion gate, both paths exercised for real** (`docs/promotion_gate_output.txt`):
+
+```
+=== second run, unchanged, should promote ===
+PROMOTE: current per-family accuracy {...all 66.67...}
+exit=0
+
+=== simulated regression on vendor_master_update (-20 pct), should block ===
+BLOCKED: regressed families: ['vendor_master_update']
+  vendor_master_update: baseline 66.67% -> current 46.67%
+exit=1
+```
+
 ## Findings
 
 **Silicon-design extension: `coverage_hole_stimulus`'s "wrong" stimulus accidentally hit the
@@ -195,6 +296,10 @@ exactly the kind of grading-rule looseness a benchmark author should surface, no
 **One tool out of 13 is never exercised by the task corpus.** `retire_product` is a real, tested tool in the gateway (`src/environments/inventory_service.py` has no retire endpoint; it is routed but the task generator's two inventory templates never call it), so the benchmark run above shows "12/13" tools actually invoked. This is disclosed rather than padded: the 13-tool gateway claim is about the gateway's catalog, which does have all 13, not about task coverage of every tool.
 
 **The injected 50ms delay on `escalate_ticket` was isolated to exactly that tool, with the other 12 moving by at most 2.7%.** `scripts/run_span_capture.py` replayed the full 420-task corpus twice, aggregated `agentbench.latency_ms` per `gen_ai.tool.name`, and flagged every tool whose mean latency moved by more than 20% between the clean and regressed runs. Only `escalate_ticket` crossed that bar (8.84ms to 59.91ms, +577%); the rest moved by 0.0 to 2.7%, which is ordinary run-to-run noise on this shared machine, not a second regression. This is the entire point of per-step attribution over a single aggregate number: a 50ms slowdown on one tool among 13 would be nearly invisible in an overall mean (420 tasks average 3 tool calls each, so one slow tool is a small fraction of total latency), but it is unambiguous once spans are grouped by tool. What this does not prove: the delay itself is injected and disclosed as synthetic (`AGENTENV_REGRESSION_DELAY_MS`), not a real production regression this benchmark happened to catch.
+
+**Finance-workflow extension: the gap landed on exactly 33.33 points again, for the same reason it did on the silicon and CRM corpora.** Every one of the 420 tasks uses a tool that reports `ok=True` regardless of which argument variant it was handed, and exactly 140 of 420 (1 in 3) carry a swapped argument chosen to guarantee the written state disagrees with the task's true expectation. A judge that only checks `ok=True` therefore passes 420/420 by construction, and an oracle that reads the one real field back and compares it to the true expectation catches exactly the 140 mistakes, for a 33.33-point gap. This is the same mechanism `src/memory/measure.py`'s Findings and this README's top-level Findings describe for the other two corpora: the gap size here is a direct function of the injection rate and the "ok means nothing about correctness" judge logic, not of the finance domain.
+
+**The promotion gate's regression path needed a deliberately constructed scenario to demonstrate, because the real 420-task run never regresses against itself.** A real run of `scripts/run_finance_promotion_gate.py` against the actual measured report always promotes, since nothing in this corpus changes run to run (fixed seed, no network). `--simulate-regression` copies the real per-family numbers and lowers exactly one family's accuracy before comparing, which is what exercises the blocking branch (`evaluate()`) against a real, reproducible number rather than only a hand-written unit-test fixture; `tests/test_finance_promotion_gate.py` additionally pins `evaluate()`'s behavior directly against synthetic baseline/current dicts, including the case where a brand-new family (absent from the baseline) is never treated as a regression.
 
 ## Measured results
 
@@ -266,6 +371,18 @@ Token and cost totals are an estimated proxy (see Honest framing), not a metered
 
 Isolation's zero-leak result is not vacuous: the same 60 queries run against the unscoped 1,000-distractor pool would have surfaced a distractor's fact first 60/60 times (`isolation_non_vacuousness` in `docs/memory_measure_report.json`).
 
+**Finance-workflow extension, measured 2026-11-20:**
+
+| claim | measured | met? |
+|---|---|---|
+| 420 multi-step finance-workflow task plans graded across 5 skill families | 420 (84 per family x 5: invoice three-way match, expense-report approval, vendor master update, budget-transfer posting, close-task completion) | met |
+| graded on real final database state by a from-scratch oracle sharing no code with the executor | `src/finance/oracle.py` reads the real Postgres row each tool wrote; imports nothing from `src/finance/tools.py` (`tests/test_finance_oracle_independence.py`) | met |
+| blocks promotion of any skill whose family accuracy regressed | `scripts/run_finance_promotion_gate.py`; demonstrated both promoting a clean run and blocking a `--simulate-regression` run, naming the regressed family (`docs/promotion_gate_output.txt`) | met |
+| 120 of 120 out-of-scope tool calls refused | 120/120 (`docs/finance_benchmark_output.txt`) | met |
+| a transcript-only judge scored the same runs 33 points higher than the state oracle | **33.33 points** (judge 420/420, 100.00%; oracle 280/420, 66.67%) | met |
+
+Machine: AMD Ryzen 7 7800X3D, 8 physical / 16 logical cores, Windows 11 Home, WSL2 Ubuntu 22.04 (capped 12 logical cores / 12GB RAM, used here only to host the shared Postgres instance), Python 3.10.12, PostgreSQL 14.24, `.venv/Scripts/python.exe scripts/run_finance_benchmark.py docs`.
+
 ## Building and running
 
 ```bash
@@ -294,6 +411,16 @@ PYTHONPATH=src python -m pytest tests/test_silicon_tasks.py tests/test_silicon_o
 python -m src.memory.measure docs
 PYTHONPATH=src python -m pytest tests/test_memory_retrieval.py tests/test_memory_oracle.py \
     tests/test_memory_judge.py tests/test_memory_isolation.py -q
+```
+
+```
+# Finance-workflow extension (reuses this repository's Postgres connection, schema `finance_ops`):
+PYTHONPATH=src python -m pytest tests/test_finance_tasks.py tests/test_finance_oracle.py \
+    tests/test_finance_oracle_independence.py tests/test_finance_judge.py tests/test_finance_permission.py \
+    tests/test_finance_promotion_gate.py -q
+python scripts/run_finance_benchmark.py docs            # 420-task + 120-plan run
+python scripts/run_finance_promotion_gate.py             # promotes on a clean run
+python scripts/run_finance_promotion_gate.py --simulate-regression vendor_master_update   # blocks, exit 1
 ```
 
 ## Sibling comparison
@@ -354,3 +481,56 @@ The task count, tool count, gap, and scope-check figures are unchanged not becau
   confirms a leak would occur without the scope on this corpus, but a differently shaped
   distractor pool (denser per-user facts, different slot distribution) could show a different
   leak rate.
+
+**Finance-workflow extension:**
+
+- Each family has exactly one tool call, not a multi-step plan; a real finance skill would
+  likely chain several calls (look up a PO, look up a receipt, then match), which this corpus
+  does not exercise.
+- Every tool is deliberately naive about its own arguments (no self-validation against the true
+  seed data before writing), which is what makes every call report `ok=True`; a tool that
+  validated its own inputs would refuse some of the 140 mistake-injected calls outright, which
+  would change what the transcript-only judge can and cannot be fooled by.
+- The CI promotion gate workflow (`.github/workflows/finance-promotion-gate.yml`) is authored and
+  YAML-validated but was not run on a live GitHub Actions runner; the gate script itself was run
+  directly on this machine, including a `--simulate-regression` run to exercise the blocking path
+  (`docs/promotion_gate_output.txt`).
+- `docker/Dockerfile.finance` is authored, not built; the Docker daemon is unreachable in this
+  headless environment, the same disclosed situation as the top-level `docker/` placeholder.
+- The 420 tasks and their true seed data are synthetic and fixed-seed; no real invoice, expense
+  report, vendor, cost center, or close checklist was involved.
+- The 5 permission roles are family-scoped (one role grants exactly one family's one tool), not a
+  finer per-field or per-amount authorization model.
+
+**Finance-workflow extension:**
+
+- **Each family has exactly one tool, not a multi-tool workflow.** `match_invoice`,
+  `approve_expense_report`, `update_vendor_bank_details`, `post_budget_transfer`, and
+  `complete_close_task` are each a single call that writes one row's terminal state; a real
+  finance skill would likely chain several tool calls (look up the PO, look up the receipt, then
+  match), but the grading question under test here, whether a value-swap mistake survives a
+  transcript-only judge, does not require a multi-step plan to demonstrate, and keeping each
+  family to one call keeps the 420-task corpus small enough to measure in one run.
+- **Every tool call reports `ok=True`, by design.** None of the five tools validates its own
+  arguments against the true seed data before writing; `match_invoice` trusts whatever
+  `po_amount`/`receipt_amount` it is handed, `complete_close_task` trusts whatever
+  `evidence_doc_id` it is handed, and so on. This is the same convention the top-level
+  CRM/ticketing/inventory benchmark uses (a value-swap mistake never makes a call fail) and is
+  what makes the transcript-only judge structurally unable to do better than 100% pass on this
+  corpus.
+- **The CI promotion gate was run directly on this machine, not on a live GitHub Actions
+  runner.** `.github/workflows/finance-promotion-gate.yml` is authored and YAML-validated
+  (`docs/finance_ci_workflow_validation.txt`); `scripts/run_finance_promotion_gate.py` was run
+  for real against this machine's Postgres instance, both for a clean promotion and for a
+  `--simulate-regression` run that artificially lowers one family's measured accuracy to
+  exercise the blocking path on a real, reproducible scenario (`docs/promotion_gate_output.txt`).
+- **Docker is authored, not built.** `docker/Dockerfile.finance` is written but the Docker
+  daemon is unreachable in this headless environment, the same disclosed situation as the
+  top-level `docker/` placeholder.
+- **The 5 roles are family-scoped, not individually permissioned.** `src/finance/permission.py`
+  grants each role exactly one family's one tool; the 120-plan adversarial suite inserts one
+  out-of-scope call into an otherwise-legitimate single-tool-call plan, the same coarse,
+  plan-level refusal convention `src/permission/scope_checker.py` uses at the top level.
+- **The 420 tasks and their true seed data are synthetic**, generated by `src/finance/tasks.py`
+  from a fixed seed; no real invoice, expense report, vendor, cost center, or close checklist was
+  involved.

@@ -1,0 +1,64 @@
+{
+  "benchmark": {
+    "total_tasks": 420,
+    "per_family": {
+      "invoice_three_way_match": {
+        "total": 84,
+        "oracle_pass": 56,
+        "judge_pass": 84,
+        "mistakes": 28,
+        "mistakes_caught": 28,
+        "oracle_pass_pct": 66.67,
+        "judge_pass_pct": 100.0
+      },
+      "expense_report_approval": {
+        "total": 84,
+        "oracle_pass": 56,
+        "judge_pass": 84,
+        "mistakes": 28,
+        "mistakes_caught": 28,
+        "oracle_pass_pct": 66.67,
+        "judge_pass_pct": 100.0
+      },
+      "vendor_master_update": {
+        "total": 84,
+        "oracle_pass": 56,
+        "judge_pass": 84,
+        "mistakes": 28,
+        "mistakes_caught": 28,
+        "oracle_pass_pct": 66.67,
+        "judge_pass_pct": 100.0
+      },
+      "budget_transfer_posting": {
+        "total": 84,
+        "oracle_pass": 56,
+        "judge_pass": 84,
+        "mistakes": 28,
+        "mistakes_caught": 28,
+        "oracle_pass_pct": 66.67,
+        "judge_pass_pct": 100.0
+      },
+      "close_task_completion": {
+        "total": 84,
+        "oracle_pass": 56,
+        "judge_pass": 84,
+        "mistakes": 28,
+        "mistakes_caught": 28,
+        "oracle_pass_pct": 66.67,
+        "judge_pass_pct": 100.0
+      }
+    },
+    "overall": {
+      "oracle_pass_pct": 66.67,
+      "judge_pass_pct": 100.0,
+      "overcredit_gap_points": 33.33
+    },
+    "mistakes_injected": 140,
+    "mistakes_caught_by_oracle": 140
+  },
+  "adversarial": {
+    "total_plans": 120,
+    "refused": 120,
+    "allowed_through": 0
+  }
+}

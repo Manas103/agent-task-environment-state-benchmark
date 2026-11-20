@@ -1,0 +1,19 @@
+# Authored for the finance-workflow extension's CI promotion gate, not built or run
+# this session: the Docker daemon is unreachable in this headless environment (no
+# Docker Desktop running, no WSL docker binary), the same disclosed situation as
+# docker/ at the top level of this repository. The promotion gate itself
+# (scripts/run_finance_promotion_gate.py) was run directly against this machine's
+# Postgres instance instead; see docs/promotion_gate_output.txt.
+
+FROM python:3.10-slim
+
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY src/ src/
+COPY scripts/ scripts/
+COPY config/ config/
+
+ENV PYTHONPATH=/app
+
+CMD ["python", "scripts/run_finance_benchmark.py", "docs"]
